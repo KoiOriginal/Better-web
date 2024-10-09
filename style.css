@@ -1,0 +1,29 @@
+/* Body */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+/* Header */
+header {
+    background: #bc85a3;
+    color: white;
+    padding: 20px 0;
+    text-align: center; 
+}
+
+nav ul {
+    list-style: none; /* no dot before text */
+    padding: 0;
+}
+nav ul a {
+    text-decoration: none;
+}
+
+
+/* Priser för biljetter */

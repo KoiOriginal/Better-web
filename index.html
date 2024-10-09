@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Header -->
-     <!-- Show the name, place and time of meeting -->
+    <!-- Show the name, place and time of meeting -->
     <header>
         <h1> Bättre Webb 2024 </h1>
         <p> Den årliga konferensen för frontendutvecklare, 18-20 oktober i Göteborg </p>
@@ -18,6 +18,7 @@
                 <li><a href="#info"> Om Konferensen </a></li>
                 <li><a href="#seminars"> Seminarier </a></li>
                 <li><a href="#signup"> Anmälan </a></li>
+                <li><a href="#price"> Priser för biljetter </a></li>
             </ul>
         </nav>
     </header>
@@ -98,6 +99,7 @@
                 <label for="name"> Namn: </label> 
                 <!-- Required -->
                 <input type="text" id="name" name="name" placeholder="Ange ditt namn" required minlength="2">
+                <!-- Using "span" for applying styles or scripts to specific parts of text. -->
                 <span class="error-message"> Ange minst två bokstäver. </span>
 
                 <!-- Adress -->
@@ -257,9 +259,38 @@
                         <input type="checkbox" id="food-day3" name="foods" value="20">
                         <label for="food-day3"> Mineralvatten: Still och kolsyrat. </label>
                     </fieldset>
+                    <!-- Allergier -->
+                     <fieldset>
+                        <legend> Allergier </legend>
+                        <!-- Using "textarea" for the users can write down a multi-line text input field -->
+                        <textarea id="allergies" name="allergies" rows="4" placeholder="Ange eventuella allergier"></textarea>
+                        <!-- Skicka -->
+                        <button type="submit"> Skicka anmälan </button>
+                     </fieldset>
                 </fieldset>
-
             </form>
+        </section>
+        <!-- Section: Priser för biljetter -->
+        <section id="price">
+            <h2> Priser för biljetter: </h2>
+            <!-- Ticket price for 1 day -->
+            <div class="ticket"> 1-dagsbiljett: <span class="price-ticket"> 1500 SEK</span>
+            <p> Inkluderar tillgång till alla sessioner under en dag samt lunch, fika och middag. </p></div>
+            <!-- Ticket price for 2 days -->
+            <div class="ticket"> 2-dagsbiljett: <span class="price-ticket"> 2800 SEK</span>
+            <p> Inkluderar tillgång till alla sessioner under två dagar samt lunch, fika och middag båda dagarna. </p></div>
+            <!-- Ticket price for 3 days -->
+            <div class="ticket"> 3-dagsbiljett: <span class="price-ticket"> 4000 SEK</span>
+            <p> Inkluderar tillgång till alla sessioner under hela konferensen samt lunch, fika och middag alla tre dagarna. </p></div>
+            <!-- What is included -->
+            <h2> Vad som ingår </h2>
+            <!-- Using "ul" for making a list -->
+            <ul>
+                <li> Tillgång till alla föreläsningar och workshops. </li>
+                <li> Lunch, eftermiddagsfika och middag under respektive dag. </li>
+                <li> Drycker (kaffe, te, vatten, läsk). </li>
+                <li> Nätverksmöjligheter med andra utvecklare och branschledare. </li>
+            </ul>
         </section>
     </main>
 
