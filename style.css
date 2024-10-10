@@ -1,28 +1,166 @@
-/* Body */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+/* import google font */
+/* * for all */
+* {
+    box-sizing: border-box;
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
+    font-style: normal; 
 }
+    
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; 
+}
+
 /* Header */
 header {
-    background: #bc85a3;
+    background: #9c5858;
     color: white;
-    padding: 20px 0;
+    padding: 2em;
     text-align: center; 
+    flex-grow: 1;  /* header covers all space */ 
+    /*position: fixed;*/  
+    width: 100%;
+    display: block;
+}
+header p {
+    font-size: large;
 }
 
-nav ul {
+/* Main */
+main {
+    padding: 20px;
+    display: flex; /* Using flex ro manage layout */
+    width: 100%;
+    height: 100vh;  /* height for full page */
+}
+section {
+    padding-top: 2em;
+}
+.section-container {
+    flex: 2; /* flex box 2 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box; /* the size doesn't change when padding/border are added */  
+    margin-left: 18em;
+}
+.side-nav {
+    width: 250px;  /* width of menu */
+    background-color: #333;  
+    color: white;
+    font-size: x-large;
+    position: fixed;
+    height: 100vh;
+    left: 0%;
+    top: 0%;
+}
+.side-nav ul {
     list-style: none; /* no dot before text */
     padding: 0;
+    margin: 0;
 }
-nav ul a {
+.side-nav ul li {
+    padding-inline: 1em;
+}
+.side-nav ul a {
     text-decoration: none;
+    margin: 2em 0; /* space between menu list */
+    color: white;
+    display: block; /* to covering all */
+}
+.side-nav ul li a:hover {
+    background-color: #575757;  /* change cursor style */
 }
 
+/* Responsivt anmälningsformulär */
+form {
+    max-width: 900px;
+    margin: auto;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea {
+    width: 50em;
+    height: 15em;
+    border-radius: 0.5em;
+}
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+
+/* Error Message */
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+.error-message {
+    display: none;
+    color: red;
+}
+input:invalid + .error-message,
+textarea:invalid + .error-message {
+    display: block;
+}
+.signup a {
+    text-decoration: none;
+    color: rgb(70, 70, 182);
+    border: rgb(70, 70, 182) solid 2px;
+    border-radius: 5px;
+    margin: 1em;
+    padding: 1em;
+}
+
+
 /* Priser för biljetter */
+/*section .price {
+    background-color: pink;
+    margin: 0;
+    padding: 20px;
+}*/
+section .price-ticket {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+    color: #333;
+    border-bottom: 2px solid #ccc; /* making underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.ticket {
+    margin-bottom: 30px;
+}
+/*.ticket .span {
+    font-weight: bold;
+    color: #d9534f;
+}*/
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    header, main, footer {
+        padding: 10px;
+    }
+}
