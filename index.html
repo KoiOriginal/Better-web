@@ -8,18 +8,20 @@
 </head>
 <body>
     <!-- Header -->
-    <!-- Show the name, place and time of meeting -->
-    <header>     
-        <div id="home">
-            <h1> Bättre Webb 2024 </h1>
-            <p> Den årliga konferensen för frontendutvecklare, 18-20 oktober i Göteborg </p>
+    <header>
+        <div class="header-image"></div>      
+        <div id="home"> <!-- Show the name, place and time of meeting -->
+            <section id="home">
+                <h1> Välkommen till vår webbplats </h1>
+                <h2> Bättre Webb 2024 </h2>   
+                <p> Den årliga konferensen för frontendutvecklare, 18-20 oktober i Göteborg </p>
+            </section>
         </div>
     </header>
 
     <!-- Main -->
     <main>
-        <!-- Create "nav" to display various menus -->
-        <nav class="side-nav">
+        <nav class="side-nav"> <!-- Create "nav" to display various menus -->
             <ul>
                 <li><a href="#home"> Hem </a></li>
                 <li><a href="#info"> Om Konferensen </a></li>
@@ -27,263 +29,234 @@
                 <li><a href="#signup"> Anmälan </a></li>
                 <li><a href="#food"> Matmeny </a></li>
                 <li><a href="#price"> Priser för biljetter </a></li>
+                <li><a href="#contact"> Kontakta oss </a></li>
             </ul>
         </nav>
-
-        <div class="section-container">
-            <!-- To create "Section" for making dropdown list, the users can choose menus -->
+        
+        <div class="section-container"> <!-- To create "Section" for making dropdown list, the users can choose menus --> 
+            <div class="about-web">
+                <img src="img/betterweb.png" alt="">
+                <p> Konferensen "Bättre Webb 2024" hålls för att skapa en plattform där frontendutvecklare kan lära sig om de senaste trenderna och teknologierna inom webbområdet. Detta seminarium ger en utmärkt möjlighet för deltagarna att utbyta kunskap och erfarenheter med experter inom olika områden. Genom föreläsningar och workshops kan utvecklare stärka sina färdigheter. Att träffa och nätverka med kollegor i branschen gör att alla kan växa och utvecklas i sina karriärer. </p>
+            </div>
             <!-- Section: Konferensinformation -->
             <section id="info">
                 <h2> Om Konferensen </h2>
-                <p>
-                    Välkommen till årets största konferens om frontendutveckling!
-                    Under tre dagar kan du lära dig om de senaste trenderna inom webbutveckling, design och användarupplevelse (UX) genom över 10 seminarier med experter. 
+                <p> <img src="img/october.png" width="50px" height="50px" alt=""> Datum: 18 - 20 oktober 2024 </p>
+                <p> <img src="img/gps.png" width="50px" height="50px" alt=""> Plats: Göteborgs Konferenscenter </p>
+                <p class="about-conference"> Välkommen till årets största konferens om frontendutveckling! Under tre dagar kan du lära dig om de senaste trenderna inom webbutveckling, design och användarupplevelse (UX) genom över 10 seminarier med experter. 
                     Frontendutvecklingskonferensen är ett årligt evenemang för utvecklare och designers som vill hålla sig uppdaterade med de nyaste verktygen och trenderna. 
-                    Det erbjuds föreläsningar, workshops och nätverksmöjligheter, med fokus på ämnen som JavaScript, UX/UI och hur man gör webbsidor snabbare.
-                </p>
-                <p> Datum: 18 - 20 oktober 2024 </p>
-                <p> Plats: Göteborgs Konferenscenter </p>
+                    Det erbjuds föreläsningar, workshops och nätverksmöjligheter, med fokus på ämnen som HTML, CSS, JavaScript, UX/UI och hur man gör webbsidor snabbare. </p>
+                <img src="img/teamwork.png" width="50px" height="50px" alt="">
+                <p> Vill du delta? </p>
+                <p> Vi välkomnar dig att delta i årets största konferens om frontendutveckling! </p>
+                <p> Lär dig om de senaste trenderna, delta i inspirerande seminarier och nätverka med andra utvecklare och designers. </p>
+                <p> Anmäl dig nu för att inte missa denna fantastiska möjlighet! </p>
             </section>
 
             <!-- Section: Seminarier -->
             <section id="seminars">
                 <h2> Seminarier </h2>
-                <p> Program för Konferens om Frontendutveckling </p>
+                <p class="about-seminars"> Program för Konferens om Frontendutveckling </p>
                 <div class="seminarier-box">
                     <!-- Day 1 -->
-                    <h3> Dag 1 - 18 oktober 2024 </h3>
+                    <h3> <img src="img/eighteen.png" width="50px" height="50px" alt=""> Dag 1 - 18 oktober 2024 </h3>
                     <h4> Seminarium 1: Modern Web Performance </h4>
-                    <h5> Tid: 09:00 - 12:00 </h5>
-                    <p> Lär dig optimera prestandan på dina webbapplikationer för att förbättra användarupplevelsen. 
-                        Vi går igenom tekniker som lazy loading, bildoptimering, och andra verktyg för att göra din webbplats snabbare. 
-                    </p>
-                    <h4> Workshop: Verktyg för Prestandaoptimering </h4>
-                    <h5> Tid: 13:00 - 16:00 </h5>
-                    <p>
-                        En praktisk workshop där du får testa verktyg för att mäta och förbättra din webbplats prestanda. 
-                        Ta med egen kod eller arbeta med exempel vi tillhandahåller.
-                    </p>
+                    <table>
+                        <tr><td class="table-left"> Tid: 09:00 - 12:00 </td><td> Lär dig optimera prestandan på dina webbapplikationer för att förbättra användarupplevelsen. Vi går igenom tekniker som lazy loading, bildoptimering, och andra verktyg för att göra din webbplats snabbare. </td></tr>
+                        <tr><td class="table-left"> Workshop: </td><td> Verktyg för Prestandaoptimering </td></tr>
+                        <tr><td class="table-left"> Tid: 13:00 - 16:00: </td><td> En praktisk workshop där du får testa verktyg för att mäta och förbättra din webbplats prestanda. Ta med egen kod eller arbeta med exempel vi tillhandahåller. </td></tr>
+                    </table>
                     <!-- Day 2 -->
-                    <h3> Dag 2 - 19 oktober 2024 </h3>
+                    <h3> <img src="img/nineteen.png" width="50px" height="50px" alt=""> Dag 2 - 19 oktober 2024 </h3>
                     <h4> Seminarium 2: Accessibility Best Practices </h4>
-                    <h5> Tid: 09:00 - 12:00 </h5>
-                    <p> En genomgång av hur du kan säkerställa att din webbplats är tillgänglig för alla användare. 
-                        Fokus ligger på praktiska exempel och hur du implementerar tillgänglighetsstandarder, inklusive WCAG 2.1.
-                    </p>
-                    <h4> Paneldiskussion: Framtiden för Tillgänglighet på Webben </h4>
-                    <h5> Tid: 13:00 - 16:00 </h5>
-                    <p>
-                        En diskussion med ledande experter inom tillgänglighet, där de delar med sig av sina insikter om framtida trender och nya regler för webbåtkomst.
-                    </p>
+                    <table>
+                        <tr><td class="table-left"> Tid: 09:00 - 12:00 </td><td> En genomgång av hur du kan säkerställa att din webbplats är tillgänglig för alla användare. Fokus ligger på praktiska exempel och hur du implementerar tillgänglighetsstandarder, inklusive WCAG 2.1. </td></tr>
+                        <tr><td class="table-left"> Paneldiskussion: </td><td> Framtiden för Tillgänglighet på Webbeng </td></tr>
+                        <tr><td class="table-left"> Tid: 13:00 - 16:00: </td><td> En diskussion med ledande experter inom tillgänglighet, där de delar med sig av sina insikter om framtida trender och nya regler för webbåtkomst. </td></tr>
+                    </table>
                     <!-- Day 3 -->
-                    <h3> Dag 3 - 20 oktober 2024 </h3>
+                    <h3> <img src="img/twenty.png" width="50px" height="50px" alt=""> Dag 3 - 20 oktober 2024 </h3>
                     <h4> Seminarium 3: JavaScript-ramverk i Fokus </h4>
-                    <h5> Tid: 09:00 - 12:00 </h5>
-                    <p> En genomgång av de mest populära JavaScript-ramverken (React, Vue och Angular) och hur de används i moderna webbapplikationer. 
-                        Vi diskuterar fördelar och nackdelar med varje ramverk.
-                    </p>
-                    <h4> Workshop: Bygga med React och Vue </h4>
-                    <h5> Tid: 13:00 - 14:30 </h5>
-                    <p>
-                        En praktisk session där du får möjlighet att utveckla mindre projekt i React eller Vue, med handledning av erfarna utvecklare.
-                    </p>
-                    <h4> Avslutning & Nätverksmingel </h4>
-                    <h5> Tid: 14:30 - 16:00 </h5>
-                    <p>
-                        Konferensen avslutas med en sammanfattning av de tre dagarna och ett informellt mingel där deltagarna kan nätverka och diskutera sina lärdomar från evenemanget.
-                    </p>
+                    <table>
+                        <tr><td class="table-left"> Tid: 09:00 - 12:00 </td><td> En genomgång av de mest populära JavaScript-ramverken (React, Vue och Angular) och hur de används i moderna webbapplikationer. Vi diskuterar fördelar och nackdelar med varje ramverk. </td></tr>
+                        <tr><td class="table-left"> Workshop: </td><td> Bygga med React och Vue </td></tr>
+                        <tr><td class="table-left"> Tid: 13:00 - 14:30 </td><td> En praktisk session där du får möjlighet att utveckla mindre projekt i React eller Vue, med handledning av erfarna utvecklare. </td></tr>
+                        <tr><td class="table-left"> Tid: 14:30 - 16:00 </td><td> Konferensen avslutas med en sammanfattning av de tre dagarna och ett informellt mingel där deltagarna kan nätverka och diskutera sina lärdomar från evenemanget. </td></tr>
+                    </table>    
                 </div>
             </section>
 
             <!-- Section: Anmälan -->
             <section id="signup">
                 <h2> Anmälan </h2>
-                <p> Fyll i formuläret nedan för att anmäla dig till konferensen. </p>
-                <!-- Creating "form" and "action" for the users input their informations -->
+                <p> Fyll i formuläret nedan för att anmäla dig till konferensen. </p> <!-- Creating "form" and "action" for the users input their informations -->
                 <form action="#" id="registration-form">
                     <!-- Namn -->
                     <label for="name"> Namn: </label> 
-                    <!-- Required -->
-                    <input type="text" id="name" name="name" placeholder="Ange ditt namn" required minlength="2">
-                    <!-- Using "span" for applying styles or scripts to specific parts of text. -->
-                    <span class="error-message"> Ange minst två bokstäver. </span>
-
+                    <input type="text" id="name" name="name" placeholder="Ange ditt namn" required minlength="2"> <!-- Required -->
+                    <span class="error-message"> Ange minst två bokstäver. </span> <!-- Using "span" for applying styles or scripts to specific parts of text. -->
+                    <!-- Age -->
+                    <label for="age"> Din ålder: (18+) </label>
+                    <input type="number" id="age" name="age" value="0" min="18">
+                    <span class="error-message"> Du måste vara minst 18 år gammal.</span>
                     <!-- Adress -->
-                    <label for="address"> Adress: </label>
-                    <!-- Required -->
-                    <input type="text" id="address" name="address" placeholder="Ange din adress" required>
-                    <span class="error-message"> Ange din adress (valfritt) </span>
-
-                    <!-- E-post -->
+                    <label for="address"> Adress: </label>  
+                    <input type="text" id="address" name="address" placeholder="Ange din adress" required> 
+                    <span class="error-message"> Ange din adress (valfritt). </span>
+                    <!-- Telephone number -->
+                    <label for="telephone-number"> Telefonnummer: </label>  
+                    <input type="text" id="telephone-number" name="telephone-number" placeholder="+46 xx xxx xxx" required> 
+                    <span class="error-message"> Ange nummer. </span>
+                    <!-- E-mail address -->
                     <label for="email"> E-post: </label>
-                    <!-- Required -->
-                    <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
+                    <input type="text" id="email" name="email"  placeholder="name@example.com" required>
                     <span class="error-message"> Ange en giltig e-postadress. </span>
-
-                    <!-- Choose the days for seminar -->
-                    <!-- Using "fieldset" for relating elements within a form -->
-                    <fieldset>
-                        <!-- Using "legend" for explaining the title -->
-                        <legend> Vilka dagar ska du delta? </legend>
-                        <input type="checkbox" id="day1" name="days" value="18">
-                        <label for="day1"> 18 Oktober 2024 </label>
-                        <input type="checkbox" id="day2" name="days" value="19">
-                        <label for="day2"> 19 Oktober 2024 </label>
-                        <input type="checkbox" id="day3" name="days" value="20">
-                        <label for="day3"> 20 Oktober 2024 </label>
-                    </fieldset>
-
-                    <!-- Link to food menu -->
-                    <a href="food.html"> Matmeny </a>
-                    
-                </form>
+                    <!-- Terms and Conditions / Villkor och bestämmelser -->
+                    <label><input name="terms-conditions" type="checkbox" required checked /> Godkänner du Bättre webb? </label>
             </section>
 
             <!-- Section: Matmeny -->
-             <section id="food">
-                <h2> Matmeny </h2>
-                <!-- Menu choices of food and beverage -->
-    <fieldset>
-        <legend> Matmeny för Seminarier 18-20 oktober 2024 </legend>
-        <!-- Day 1 -->
-        <fieldset>
-            <legend> Dag 1 - 18 oktober 2024 </legend>
-            <h3> Lunch </h3> <!-- Lunch menu-->
-            <h4> Vegetarisk alternativ (Välj 1): </h4> <!-- Vegetarian menu -->
-            <input type="checkbox" id="food-day1" name="foods" value="18"> <!-- Vegetarian menu 1 -->
-            <label for="food-day1"> Grönsaksquiche </label>
-            <p> Ingredienser: Spenat, fetaost, paprika och ägg. </p>
-            <input type="checkbox" id="food-day1" name="foods" value="18"> <!-- Vegetarian menu 2 -->
-            <label for="food-day1"> Kikärtsbiffare </label>
-            <p> Ingredienser: Kikärtor, lök, persilja och kryddor, serveras med tzatziki. </p>
-            <input type="checkbox" id="food-day1" name="foods" value="18"> <!-- Vegetarian menu 3 -->
-            <label for="food-day1"> Rostad grönsakssallad </label>
-            <p> Ingredienser: Rödbetor, morötter, sötpotatis och ruccola, toppad med valnötter. </p>
-            <h4> Kött alternativ (Välj 1): </h4> <!-- Meat menu -->
-            <input type="checkbox" id="food-day1" name="foods" value="18"> <!-- Meat menu 1 -->
-            <label for="food-day1"> Kycklingfilé </label>
-            <p> Ingredienser: Grillad kyckling med rosmarin och citron. </p>
-            <input type="checkbox" id="food-day1" name="foods" value="18"> <!-- Meat menu 2  -->
-            <label for="food-day1"> Köttbullar i gräddsås </label>
-            <p> Ingredienser: Nötkött, lök, kryddor och grädde, serveras med potatismos. </p>
-            <input type="checkbox" id="food-day1" name="foods" value="18"> <!-- Meat menu 3 -->
-            <label for="food-day1"> Fläskkotlett </label>
-            <p> Ingredienser: Ugnsstekt fläskkotlett med äppelsås och klyftpotatis. </p>
-            <h4> Fika (Välj 2): </h4> <!-- Coffee break -->
-            <input type="checkbox" id="food-day1" name="foods" value="18">
-            <label for="food-day1"> Färsk frukt (äpple, banan, päron). </label>
-            <input type="checkbox" id="food-day1" name="foods" value="18">
-            <label for="food-day1"> Kaffe och te. </label>
-            <input type="checkbox" id="food-day1" name="foods" value="18">
-            <label for="food-day1"> Chokladbollar med havre. </label>
-            <input type="checkbox" id="food-day1" name="foods" value="18">
-            <label for="food-day1"> Småkakor (kolasnittar och mandelsnittar). </label>
-            <h4> Dryckesalternativ (tillgängliga alla dagar): </h4> <!-- Beverage menu -->
-            <input type="checkbox" id="food-day1" name="foods" value="18">
-            <label for="food-day1"> Kaffe: Vanligt och koffeinfritt. </label>
-            <input type="checkbox" id="food-day1" name="foods" value="18">
-            <label for="food-day1"> Te: Grönt, svart och örtte. </label>
-            <input type="checkbox" id="food-day1" name="foods" value="18">
-            <label for="food-day1"> Ekologisk juice: Apelsin, äpple och tranbär. </label>
-            <input type="checkbox" id="food-day1" name="foods" value="18">
-            <label for="food-day1"> Mineralvatten: Still och kolsyrat. </label>
-        </fieldset>
-        <!-- Day 2 -->
-        <fieldset>
-            <legend> Dag 2 - 19 oktober 2024 </legend>
-            <h3> Lunch </h3> <!-- Lunch menu-->
-            <h4> Vegetarisk alternativ (Välj 1): </h4> <!-- Vegetarian menu -->
-            <input type="checkbox" id="food-day2" name="foods" value="19"> <!-- Vegetarian menu 1 -->
-            <label for="food-day2"> Linssallad </label>
-            <p> Ingredienser: Gröna linser, körsbärstomater, gurka och fetaost, med citronvinaigrette. </p>
-            <input type="checkbox" id="food-day2" name="foods" value="19"> <!-- Vegetarian menu 2 -->
-            <label for="food-day2"> Quinoasallad </label>
-            <p> Ingredienser: Quinoa, avokado, majs, bönor och lime. </p>
-            <input type="checkbox" id="food-day2" name="foods" value="19"> <!-- Vegetarian menu 3 -->
-            <label for="food-day2"> Ratatouille </label>
-            <p> Ingredienser: Aubergine, zucchini, paprika och tomat, serveras med bröd. </p>
-            <h4> Kött alternativ (Välj 1): </h4> <!-- Meat menu -->
-            <input type="checkbox" id="food-day2" name="foods" value="19"> <!-- Meat menu 1 -->
-            <label for="food-day2"> Lammköttbullar </label>
-            <p> Ingredienser: Lammfärs, vitlök, persilja och kryddor, serveras med couscous. </p>
-            <input type="checkbox" id="food-day2" name="foods" value="19"> <!-- Meat menu 2 -->
-            <label for="food-day2"> Grillad kyckling </label>
-            <p> Ingredienser: Marinerad kyckling med paprika och lök, serveras med ris. </p>
-            <input type="checkbox" id="food-day2" name="foods" value="19"> <!-- Meat menu 3 -->
-            <label for="food-day2"> Pasta med köttfärssås </label>
-            <p> Ingredienser: Nötkött, lök, tomater och kryddor. </p>
-            <h4> Fika (Välj 2): </h4> <!-- Coffee break -->
-            <input type="checkbox" id="food-day2" name="foods" value="18">
-            <label for="food-day2"> Muffins (blåbär och choklad). </label>
-            <input type="checkbox" id="food-day2" name="foods" value="18">
-            <label for="food-day2"> Kaffe och te. </label>
-            <input type="checkbox" id="food-day2" name="foods" value="18">
-            <label for="food-day2"> Yoghurt med granola och färska bär. </label>
-            <input type="checkbox" id="food-day2" name="foods" value="18">
-            <label for="food-day2"> Nötter och torkad frukt. </label>
-            <h4> Dryckesalternativ (tillgängliga alla dagar): </h4> <!-- Beverage menu -->
-            <input type="checkbox" id="food-day2" name="foods" value="19">
-            <label for="food-day2"> Kaffe: Vanligt och koffeinfritt. </label>
-            <input type="checkbox" id="food-day2" name="foods" value="19">
-            <label for="food-day2"> Te: Grönt, svart och örtte. </label>
-            <input type="checkbox" id="food-day2" name="foods" value="19">
-            <label for="food-day2"> Ekologisk juice: Apelsin, äpple och tranbär. </label>
-            <input type="checkbox" id="food-day2" name="foods" value="19">
-            <label for="food-day2"> Mineralvatten: Still och kolsyrat. </label>
-        </fieldset>
-        <!-- Day 3 -->
-        <fieldset>
-            <legend> Dag 3 - 20 oktober 2024 </legend>
-            <h3> Lunch </h3> <!-- Lunch menu-->
-            <h4> Vegetarisk alternativ (Välj 1): </h4> <!-- Vegetarian menu -->
-            <input type="checkbox" id="food-day3" name="foods" value="20"> <!-- Vegetarian menu 1 -->
-            <label for="food-day3"> Rostade grönsakswraps </label>
-            <p> Ingredienser: Paprika, zucchini, aubergine och hummus. </p>
-            <input type="checkbox" id="food-day3" name="foods" value="20"> <!-- Vegetarian menu 2 -->
-            <label for="food-day3"> Färgglad bönsallad </label>
-            <p> Ingredienser: Svarta bönor, kidneybönor, majs, paprika och koriander. </p>
-            <input type="checkbox" id="food-day3" name="foods" value="20"> <!-- Vegetarian menu 3 -->
-            <label for="food-day3"> Pasta med spenat och ricotta </label>
-            <p> Ingredienser: Pasta, spenat, ricotta och parmesan. </p>
-            <h4> Kött alternativ (Välj 1): </h4> <!-- Meat menu -->
-            <input type="checkbox" id="food-day3" name="foods" value="20"> <!-- Vegetarian menu 1 -->
-            <label for="food-day3"> Grillad lax </label>
-            <p> Ingredienser: Laxfilé med citron och dill, serveras med potatis. </p>
-            <input type="checkbox" id="food-day3" name="foods" value="20"> <!-- Vegetarian menu 2 -->
-            <label for="food-day3"> Köttfärsbiffar </label>
-            <p> Ingredienser: Nötkött, lök och kryddor, serveras med gräddsås och potatismos. </p>
-            <input type="checkbox" id="food-day3" name="foods" value="20"> <!-- Vegetarian menu 3 -->
-            <label for="food-day3"> Tacos med kyckling </label>
-            <p> Ingredienser: Kyckling, sallad, tomat och guacamole, serveras i tortillabröd. </p>
-            <h4> Fika (Välj 2): </h4> <!-- Coffee break -->
-            <input type="checkbox" id="food-day2" name="foods" value="18">
-            <label for="food-day2"> Chokladchipkakor. </label>
-            <input type="checkbox" id="food-day2" name="foods" value="18">
-            <label for="food-day2"> Kaffe och te. </label>
-            <input type="checkbox" id="food-day2" name="foods" value="18">
-            <label for="food-day2"> Småkakor (havregrynskakor). </label>
-            <input type="checkbox" id="food-day2" name="foods" value="18">
-            <label for="food-day2"> Fruktfat (säsongens frukter). </label>
-            <h4> Dryckesalternativ (tillgängliga alla dagar): </h4> <!-- Beverage menu -->
-            <input type="checkbox" id="food-day3" name="foods" value="20">
-            <label for="food-day3"> Kaffe: Vanligt och koffeinfritt. </label>
-            <input type="checkbox" id="food-day3" name="foods" value="20">
-            <label for="food-day3"> Te: Grönt, svart och örtte. </label>
-            <input type="checkbox" id="food-day3" name="foods" value="20">
-            <label for="food-day3"> Ekologisk juice: Apelsin, äpple och tranbär. </label>
-            <input type="checkbox" id="food-day3" name="foods" value="20">
-            <label for="food-day3"> Mineralvatten: Still och kolsyrat. </label>
-        </fieldset>
-        <!-- Allergier -->
-         <fieldset>
-            <legend> Allergier </legend>
-            <!-- Using "textarea" for the users can write down a multi-line text input field -->
-            <textarea id="allergies" name="allergies" rows="4" placeholder="Ange eventuella allergier"></textarea>
-            <!-- Skicka -->
-            <button type="submit"> Skicka anmälan </button>
-         </fieldset>
-    </fieldset>  
-             </section>
+            <section id="food">
+                <h2> Matmeny </h2> <!-- Menu choices of food and beverage (Drop-down list)-->    
+                    <!-- Day 1 -->
+                    <fieldset>
+                        <legend> Dag 1 - 18 oktober 2024 </legend>                       
+                        <form action="/action_page.php"> <!-- Vegetarian menu -->
+                            <label for="vegetarian-menu"> <img class="img-food" src="img\food.png" alt=""> Vegetarisk alternativ (Välj 1): </label>
+                            <select name="vegetarian-menu" id="vegetarian-menu">
+                                <option value="Grönsaksquiche"> Grönsaksquiche </option>
+                                <option value="Kikärtsbiffare"> Kikärtsbiffare </option>
+                                <option value="Rostad grönsakssallad"> Rostad grönsakssallad </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Meat menu -->
+                            <label for="Meat-menu"> <img class="img-food" src="img\food.png" alt=""> Kött alternativ (Välj 1): </label>
+                            <select name="Meat-menu" id="Meat-menu">
+                                <option value="Kycklingfilé"> Kycklingfilé </option>
+                                <option value="Köttbullar-i-gräddsås"> Köttbullar i gräddsås </option>
+                                <option value="Fläskkotlett"> Fläskkotlett </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Coffee break -->
+                            <label for="Coffee-break"> <img class="img-food" src="img/drink.png" alt=""> Fika (Välj 2): </label>
+                            <select name="Coffee-brea" id="Coffee-brea">
+                                <option value="Fika-1"> Färsk frukt (äpple, banan, päron). </option>
+                                <option value="Fika-2"> Kaffe och te. </option>
+                                <option value="Fika-3"> Chokladbollar med havre. </option>
+                                <option value="Fika-4"> Småkakor (kolasnittar och mandelsnittar). </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Beverage menu -->
+                            <label for="Drink"> <img class="img-food" src="img/drink2.png" alt=""> Dryckesalternativ (tillgängliga alla dagar): </label>
+                            <select name="Drink" id="Drink">
+                                <option value="Drink-1"> Kaffe: Vanligt och koffeinfritt. </option>
+                                <option value="Drink-2"> Te: Grönt, svart och örtte. </option>
+                                <option value="Drink-3"> Ekologisk juice: Apelsin, äpple och tranbär. </option>
+                                <option value="Drink-4"> Mineralvatten: Still och kolsyrat. </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                    </fieldset>
+                    <!-- Day 2 -->
+                    <fieldset>
+                        <legend> Dag 2 - 19 oktober 2024 </legend>
+                        <form action="/action_page.php"> <!-- Vegetarian menu -->
+                            <label for="vegetarian-menu"> <img class="img-food" src="img\food.png" alt=""> Vegetarisk alternativ (Välj 1): </label>
+                            <select name="vegetarian-menu" id="vegetarian-menu">
+                                <option value="Grönsaksquiche"> Linssallad </option>
+                                <option value="Kikärtsbiffare"> Quinoasallad </option>
+                                <option value="Rostad grönsakssallad"> Ratatouille </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Meat menu -->
+                            <label for="Meat-menu"> <img class="img-food" src="img\food.png" alt=""> Kött alternativ (Välj 1): </label>
+                            <select name="Meat-menu" id="Meat-menu">
+                                <option value="Kycklingfilé"> Lammköttbullar </option>
+                                <option value="Köttbullar-i-gräddsås"> Grillad kyckling </option>
+                                <option value="Fläskkotlett"> Pasta med köttfärssås </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Coffee break -->
+                            <label for="Coffee-break"> <img class="img-food" src="img/drink.png" alt=""> Fika (Välj 2): </label>
+                            <select name="Coffee-brea" id="Coffee-brea">
+                                <option value="Fika-1"> Muffins (blåbär och choklad). </option>
+                                <option value="Fika-2"> Kaffe och te. </option>
+                                <option value="Fika-3"> Yoghurt med granola och färska bär. </option>
+                                <option value="Fika-4"> Nötter och torkad frukt. </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Beverage menu -->
+                            <label for="Drink"> <img class="img-food" src="img/drink2.png" alt=""> Dryckesalternativ (tillgängliga alla dagar): </label>
+                            <select name="Drink" id="Drink">
+                                <option value="Drink-1"> Kaffe: Vanligt och koffeinfritt. </option>
+                                <option value="Drink-2"> Te: Grönt, svart och örtte. </option>
+                                <option value="Drink-3"> Ekologisk juice: Apelsin, äpple och tranbär. </option>
+                                <option value="Drink-4"> Mineralvatten: Still och kolsyrat. </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                    </fieldset>
+                    <!-- Day 3 -->
+                    <fieldset>
+                        <legend> Dag 3 - 20 oktober 2024 </legend>
+                        <form action="/action_page.php"> <!-- Vegetarian menu -->
+                            <label for="vegetarian-menu"> <img class="img-food" src="img\food.png" alt=""> Vegetarisk alternativ (Välj 1): </label>
+                            <select name="vegetarian-menu" id="vegetarian-menu">
+                                <option value="Grönsaksquiche"> Rostade grönsakswraps </option>
+                                <option value="Kikärtsbiffare"> Färgglad bönsallad </option>
+                                <option value="Rostad grönsakssallad"> Pasta med spenat och ricotta </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Meat menu -->
+                            <label for="Meat-menu"> <img class="img-food" src="img\food.png" alt=""> Kött alternativ (Välj 1): </label>
+                            <select name="Meat-menu" id="Meat-menu">
+                                <option value="Kycklingfilé"> Grillad lax </option>
+                                <option value="Köttbullar-i-gräddsås"> Köttfärsbiffar </option>
+                                <option value="Fläskkotlett"> Tacos med kyckling </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Coffee break -->
+                            <label for="Coffee-break"> <img class="img-food" src="img/drink.png" alt=""> Fika (Välj 2): </label>
+                            <select name="Coffee-brea" id="Coffee-brea">
+                                <option value="Fika-1"> Muffins och chokladchipkakor. </option>
+                                <option value="Fika-2"> Kaffe och te. </option>
+                                <option value="Fika-3"> Småkakor (havregrynskakor). </option>
+                                <option value="Fika-4"> Fruktfat (säsongens frukter). </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                        <form action="/action_page.php"> <!-- Beverage menu -->
+                            <label for="Drink"> <img class="img-food" src="img/drink2.png" alt=""> Dryckesalternativ (tillgängliga alla dagar): </label>
+                            <select name="Drink" id="Drink">
+                                <option value="Drink-1"> Kaffe: Vanligt och koffeinfritt. </option>
+                                <option value="Drink-2"> Te: Grönt, svart och örtte. </option>
+                                <option value="Drink-3"> Ekologisk juice: Apelsin, äpple och tranbär. </option>
+                                <option value="Drink-4"> Mineralvatten: Still och kolsyrat. </option>
+                            </select>
+                            <input type="submit">
+                        </form>
+                    </fieldset>     
+                    <!-- Allergier -->
+                    <fieldset class="allergies-container">
+                        <legend> Allergier </legend> 
+                        <div><img src="img/allergy.png" width="150px" height="150px"></div>
+                        <p> Hej alla! </p>
+                        <p> För att säkerställa allas säkerhet och njutning, vänligen ta ett ögonblick för att skriva ner eventuella matallergier du har. </p>
+                        <p> Denna information hjälper oss att skapa en säker matupplevelse för alla. </p>
+                        <p> Tack för ert samarbete! </p>
+                        <!-- Using "textarea" for the users can write down a multi-line text input field -->
+                        <textarea id="allergies" name="allergies" rows="4" placeholder="Ange eventuella allergier"></textarea>
+                        <button type="submit"> Skicka anmälan </button> <!-- Click & send -->
+                    </fieldset>
+            </section>
 
             <!-- Section: Priser för biljetter -->
             <section id="price">
@@ -297,15 +270,60 @@
                 <!-- Ticket price for 3 days -->
                 <div class="ticket"> 3-dagsbiljett: <span class="price-ticket"> 4000 SEK</span>
                 <p> Inkluderar tillgång till alla sessioner under hela konferensen samt lunch, fika och middag alla tre dagarna. </p></div>
+                    </form> <!-- Choose the days for seminar -->  
+                        <fieldset> <!-- Using "fieldset" for relating elements within a form -->  
+                            <legend> Vilka dagar ska du delta? </legend> <!-- Using "legend" for explaining the title -->
+                            <input type="checkbox" id="day1" name="days" value="18">
+                            <label for="day1"> 18 Oktober 2024 </label>
+                            <input type="checkbox" id="day2" name="days" value="19">
+                            <label for="day2"> 19 Oktober 2024 </label>
+                            <input type="checkbox" id="day3" name="days" value="20">
+                            <label for="day3"> 20 Oktober 2024 </label>
+                        </fieldset>
+                    </form>
                 <!-- What is included -->
                 <h2> Vad som ingår </h2>
-                <!-- Using "ul" for making a list -->
-                <ul>
+                <ul> <!-- Using "ul" for making a list -->
                     <li> Tillgång till alla föreläsningar och workshops. </li>
                     <li> Lunch, eftermiddagsfika och middag under respektive dag. </li>
                     <li> Drycker (kaffe, te, vatten, läsk). </li>
                     <li> Nätverksmöjligheter med andra utvecklare och branschledare. </li>
                 </ul>
+            </section>
+
+            <!-- Section: Kontakta oss -->
+            <section id="contact">
+                <h2> Kontakta oss </h2>
+                <div class="contact-info"> <!-- Contact informations -->
+                    <h3> Kontaktinformation </h3>
+                    <ul>
+                        <li><strong> Hemsida: </strong> <a href="http://www.battrewebb2024.se"> www.battrewebb2024.se </a></li>
+                        <li><strong> E-post: </strong> <a href="mailto:info@battrewebb2024.se"> info@battrewebb2024.se </a></li>
+                        <li><strong> Telefon: </strong> +46 12 345 678 </li>
+                        <li><strong> Adress: </strong> Svenska Mässan, Mässans Gata 24, 412 51 Göteborg, Sverige </li>
+                    </ul>
+                </div>
+                <div class="social-media"> <!-- Social media -->
+                    <h3> Sociala medier </h3> 
+                    <ul>
+                        <li> Twitter: <a href="https://twitter.com/BättreWebb2024"> @BättreWebb2024 </a></li>
+                        <li> LinkedIn: <a href="https://linkedin.com/company/battrewebb2024"> linkedin.com/company/battrewebb2024 </a></li>
+                        <li> Instagram: <a href="https://instagram.com/battrewebbconf"> @battrewebbconf </a></li>
+                    </ul>
+                </div>
+                <div class="organizer"> <!-- Organizer -->
+                    <h3> Eventansvariga </h3>
+                    <ul>
+                        <li><strong> Photsathon Karlsson, Eventkoordinator </strong><br>
+                            E-post: <a href="mailto:photsathon.karlsson@battrewebb2024.se"> photsathon.karlsson@battrewebb2024.se </a><br> <!-- link to e-mail -->
+                            Telefon: +46 70 987 6543
+                        </li>
+                        <li><strong> Josefin Karlsson, Teknisk chef </strong><br>
+                            E-post: <a href="mailto:josefin.karlsson@battrewebb2024.se"> josefin.karlsson@battrewebb2024.se </a><br>
+                            Telefon: +46 70 123 9876
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div>
     </main>
