@@ -11,22 +11,24 @@
 
 /* Header */
 header {
-    color: black;
-    margin: 0;
-    padding: 2em;
-    text-align: end; 
+    color: white;
+    margin: 0%;
+    padding: 1em;
+    text-align: start; 
     flex-grow: 1;  /* header covers all space */ 
-    /*position: fixed;*/  
     width: 100%;
+    height: 250px;
     display: block;
-    background-color: #d6423d;
-    /*background-image: url('img/img-betterweb.jpg');*/
-    /*background-size: cover; /* Adjust image size to cover the element */
-    /*background-position: center; /* Center the image */
-    /*background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-image: url('img/pacman-header.png');
+    background-size: cover; /* Adjust image size to cover the element */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
-header p {
-    font-size: large;
+header h1 {
+    margin-left: 8.6em;
+    margin-top: 1em;
+    padding: 0%;
+    font-size: xxx-large;
 }
 
 /* Body */
@@ -43,21 +45,6 @@ main {
     width: 100%;
     height: 100vh;  /* height for full page */
 }
-.about-web img {
-    width: 800px;
-    height: 400px;
-    margin-bottom: 2.5em;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-.about-web {
-    line-height: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5em;
-    margin-right: 5em;
-}
 section {
     padding-top: 1em;
 }
@@ -70,8 +57,8 @@ section {
     margin-left: 18em;
 }
 .side-nav { /* Left menu */
-    width: 250px;  
-    background-color: #333;  
+    width: 270px;  
+    background-color: black;  
     color: white;
     font-size: x-large;
     position: fixed;
@@ -97,52 +84,75 @@ section {
     background-color: #474545;  /* change cursor style */
 }
 
+/* Name of menu list */
+.section-container h2 { /* title menu */
+    box-shadow: rgba(2, 98, 187, 0.35) 0px 5px 15px;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    display: inline-block;
+    text-align: center;
+}
+
 /* Om Konferensen menu */
+.about-web img {
+    margin-left: 10em;
+    width: 50px;
+    height: 50px;
+}
 .section-container .about-conference {
-    margin-top: 3em;
+    margin-top: 2em;
     margin-bottom: 3em;
     margin-left: 6em;
     margin-right: 6em;
     padding: 2em;
     font-size: large;
     line-height: 3em;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: rgba(0, 0, 0, 0.075);
+    box-shadow: rgba(199, 147, 4, 0.35) 0px 5px 15px;
 } 
 /* Seminarier menu */
 .section-container .about-seminars {
-    font-size: large;
-    width: 30em;
+    font-size: x-large; 
     text-align: center;
-    padding: 0.3em;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 0%;
 }
-.section-container table {
-   width: 87%;
+.section-container .seminarier-box {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+.seminarier-box .seminarier-box1 {
+    text-align: center;
+    flex-grow: 1; /* making box as the same size */
+} 
+.section-container .seminarier-box2 {
    margin-left: 5em;
    margin-right: 5em;
    padding: 1em;
-   font-size: large;
-   background-image: url('img/paper.jpg');
-   background-repeat: no-repeat;
-   background-size: cover;
-   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   font-size: medium;
+   box-shadow: rgba(250, 2, 2, 0.35) 0px 5px 15px;
+   border-radius: 1em;
+   text-align: start;
 }
-.section-container .table-left {
-    width: 14em;
-    line-height: 3.5em;
-} 
 
-/* sign-up & food menu */
+/* Anmälan menu */
+.signup-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+.signup-form, .food-form { /* signup & food form */
+    margin: 0.5em;
+    flex-grow: 1; 
+    line-height: 1em; 
+}
+.food-form {
+    width: 30%;
+    padding-left: 3em;
+}
 section .img-food {
     width: 50px; 
     height: 50px;
     padding: 5px;
-}
-form {
-    max-width: 900px;
-    margin: auto;
 }
 input, textarea, select {
     width: 100%;
@@ -151,23 +161,24 @@ input, textarea, select {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-section .allergies-container {
-    padding: 2em;
+.allergies-text {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;   
 }
-section .allergies-container p {
-    margin: 2em;
+.allergies-text1 {
+    margin: 1em;
 }
 textarea { /* Allergies text-box */
-    width: 50em;
-    height: 15em;
+    width: 25em;
+    height: 10em;
     border-radius: 0.5em;
     background-color: ivory;
 }
 button {/* food allergies button */
     padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    background-color: #76d2f7;
+    border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -203,9 +214,6 @@ label {
     align-items: center; 
     margin: 1em;
 } 
-/*input[type="checkbox"] {
-    margin-right: 2px; /* Adds space between the checkbox and the text 
-}*/
 
 /* Priser för biljetter */
 section .price-ticket {
@@ -217,10 +225,6 @@ section .price-ticket {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-weight: bold;
     color: #d9534f;
-}
-section h2 {
-    /*padding-bottom: 10px;
-    margin-bottom: 20px;*/
 }
 .ticket {
     margin-bottom: 30px;
