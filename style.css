@@ -86,7 +86,7 @@ section {
 
 /* Name of menu list */
 .section-container h2 { /* title menu */
-    box-shadow: rgba(2, 98, 187, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 0.5em;
     padding: 0.5em;
     display: inline-block;
@@ -138,7 +138,11 @@ section {
 .signup-container {
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    margin-right: 5em;
+}
+.signup-form {
+    width: 300px;
+    padding: 2em;
 }
 .signup-form, .food-form { /* signup & food form */
     margin: 0.5em;
@@ -167,13 +171,15 @@ input, textarea, select {
     justify-content: space-between;   
 }
 .allergies-text1 {
-    margin: 1em;
+    margin: 2em;
+    padding: 1em;
+    line-height: 1.5em;
 }
 textarea { /* Allergies text-box */
     width: 25em;
     height: 10em;
     border-radius: 0.5em;
-    background-color: ivory;
+    background-color: #76d3f731;
 }
 button {/* food allergies button */
     padding: 10px 15px;
@@ -184,7 +190,7 @@ button {/* food allergies button */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 button:hover {
-    background-color: #45a049;
+    background-color: #097dac;
 }
 
 /* Anmälan & Error message & Checkbox */
@@ -208,32 +214,148 @@ textarea:invalid + .error-message {
     margin: 1em;
     padding: 1em;
 }
-/* terms & conditions */
-label {
-    display: flex;
-    align-items: center; 
-    margin: 1em;
-} 
 
 /* Priser för biljetter */
-section .price-ticket {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    color: #d9534f;
+section .price-form { /* Tickets price & details container */
+    display: flex;
+    justify-content: space-between;
+}
+.ticket-price { /* Tickets container */
+    margin: 2em;
+    width: 20em;
 }
 .ticket {
-    margin-bottom: 30px;
+    border-radius: 5px;
+    line-height: 1.8em;
+    padding: 1em;
+    margin: 1em;
+    margin-bottom: 10px;
+    box-shadow: rgba(217, 171, 221, 0.35) 0px -50px 36px -28px inset;
+}
+.price-ticket {
+    font-weight: bold;
+    color: #f6a4a2;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.ticket-buying-container {
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.ticket-choices { /* checkbox */
+    margin-bottom: 20px;
+}
+.checkbox-label { /* checkbox */
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px; /* Add spacing between each checkbox */
+}
+input[type="checkbox"] {
+    margin-left: 0; /* Space from the left side */
+    margin-right: 0; /* Space between checkbox and text */
+}
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #858080;
+}
+.ticket-included {
+    width: 450px;
+    margin: 2em;
+    padding: 1em;
+    line-height: 3em;
+    height: 100%;
+}
+.ticket-included img {
+    width: 50px;
+    height: 40px;
 }
 
 /* Contact */
+section .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: auto auto; /* Two rows */
+}
+.contact-betterweb {
+    font-size: x-large;
+    grid-column: 1 / 3;
+    justify-self: center;
+}
+.contact-info {
+    grid-column: 1;
+}
+.organizer {
+    grid-column: span 2; /* Spanning both columns */
+}
+.social-media {
+    grid-column: 2; 
+}
+.contact-betterweb, .contact-info, .organizer, .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2em;
+}
+.contact-info img {
+    width: 50px;
+    height: 50px;
+} 
 section a {
     text-decoration: none;
+    color: gray;
 }
+section ul {
+    list-style-type: none; /* Removes the bullets from the ul */
+    padding: 0; 
+    margin: 0; 
+}
+section li {
+    margin-bottom: 10px; 
+}
+.person img {
+    width: 150px;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
+}
+.organize { /* Organizer container */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+.person {
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+    box-shadow: rgba(194, 149, 3, 0.35) 0px 5px 15px;
+    border-radius: 2em;
+}
+.social-media { /* Social media container */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: auto auto; /* Two rows */
+}
+.social-media img {
+    width: 40px;
+    height: 40px;
+}
+
+
 
 /* Responsiv design */
 @media (max-width: 768px) {

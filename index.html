@@ -104,8 +104,6 @@
                             <label for="email"> E-post: </label>
                             <input type="text" id="email" name="email"  placeholder="name@example.com" required>
                             <span class="error-message"> Ange en giltig e-postadress. </span>
-                            <!-- Terms and Conditions / Villkor och bestämmelser -->
-                            <label><input name="terms-conditions" type="checkbox" required checked/> Godkänner du Bättre webb? </label>
                         </form>
                     </div>
                     <div class="food-form"> <!-- Food-form -->
@@ -139,98 +137,136 @@
                             </form>
                             <input class="submit" type="submit">
                         </fieldset> 
-                        <fieldset class="allergies-container"> <!-- Allergier -->
-                            <legend> Allergier </legend> 
                             <div class="allergies-text">
-                                <div class="allergies-text1"><img src="img/allergy.png" width="150px" height="150px"></div>
+                                <div class="allergies-text1"><img src="img/food-allergy.png" width="150px" height="150px"></div>
                                 <div class="allergies-text1">
-                                    <p> Hej alla! </p>
-                                    <p> För att säkerställa allas säkerhet och njutning, vänligen ta ett ögonblick för att skriva ner eventuella matallergier du har.
-                                    Denna information hjälper oss att skapa en säker matupplevelse för alla. </p>
+                                    <p> Medicinskt larm allergier! </p>
+                                    <p> Vänligen skriv ner eventuella matallergier för att säkerställa en säker matupplevelse för alla. </p>
                                     <p> Tack för ert samarbete! </p>
                                 </div>
                             </div>
                             <!-- Using "textarea" for the users can write down a multi-line text input field -->
                             <textarea id="allergies" name="allergies" rows="4" placeholder="Ange eventuella allergier"></textarea>
                             <button type="submit"> Skicka anmälan </button> <!-- Click & send -->
-                        </fieldset>  
                     </div> 
                 </div>      
             </section>
-            
+
             <!-- Section: Priser för biljetter -->
             <section id="price">
-                <h2> Priser för biljetter </h2>
-                <!-- Ticket price for 1 day -->
-                <div class="ticket"> 1-dagsbiljett: <span class="price-ticket"> 1500 SEK</span>
-                <p> Inkluderar tillgång till alla sessioner under en dag samt lunch, fika och middag. </p></div>
-                <!-- Ticket price for 2 days -->
-                <div class="ticket"> 2-dagsbiljett: <span class="price-ticket"> 2800 SEK</span>
-                <p> Inkluderar tillgång till alla sessioner under två dagar samt lunch, fika och middag båda dagarna. </p></div>
-                <!-- Ticket price for 3 days -->
-                <div class="ticket"> 3-dagsbiljett: <span class="price-ticket"> 4000 SEK</span>
-                <p> Inkluderar tillgång till alla sessioner under hela konferensen samt lunch, fika och middag alla tre dagarna. </p></div>
-                    </form> <!-- Choose the days for seminar -->  
-                        <fieldset> <!-- Using "fieldset" for relating elements within a form -->  
-                            <legend> Vilka dagar ska du delta? </legend> <!-- Using "legend" for explaining the title -->
-                            <input type="checkbox" id="day1" name="days" value="18">
-                            <label for="day1"> 18 Oktober 2024 </label>
-                            <input type="checkbox" id="day2" name="days" value="19">
-                            <label for="day2"> 19 Oktober 2024 </label>
-                            <input type="checkbox" id="day3" name="days" value="20">
-                            <label for="day3"> 20 Oktober 2024 </label>
-                        </fieldset>
-                    </form>
-                <!-- What is included -->
-                <h2> Vad som ingår </h2>
-                <ul> <!-- Using "ul" for making a list -->
-                    <li> Tillgång till alla föreläsningar och workshops. </li>
-                    <li> Lunch, eftermiddagsfika och middag under respektive dag. </li>
-                    <li> Drycker (kaffe, te, vatten, läsk). </li>
-                    <li> Nätverksmöjligheter med andra utvecklare och branschledare. </li>
-                </ul>
+                <!-- Tickets price & details -->
+                <h2> Priser för biljetter <img src="img/title-pinkghost.png" width="60px" height="50px" alt=""></h2>
+                <div class="price-form">
+                    <div class="ticket-price">
+                        <div class="ticket"> <!-- Ticket price for 1 day -->
+                            1-dagsbiljett: <span class="price-ticket">1500 SEK</span>
+                            <p>Inkluderar tillgång till alla sessioner under en dag samt lunch, fika och middag.</p>
+                        </div>
+                        <div class="ticket"> <!-- Ticket price for 2 days -->
+                            2-dagsbiljett: <span class="price-ticket">2800 SEK</span>
+                            <p>Inkluderar tillgång till alla sessioner under två dagar samt lunch, fika och middag båda dagarna.</p>
+                        </div>
+                        <div class="ticket"> <!-- Ticket price for 3 days -->
+                            3-dagsbiljett: <span class="price-ticket">4000 SEK</span>
+                            <p>Inkluderar tillgång till alla sessioner under hela konferensen samt lunch, fika och middag alla tre dagarna.</p>
+                        </div>
+                    </div>
+                    <!-- Form for buying the tickets -->
+                    <div class="ticket-buying-container">
+                        <form action="#" method="POST"> <!-- Fake link -->
+                            <h1> Köp 3-dagsbiljett </h1>
+                            <label for="name"> Fullständigt namn: </label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email"> E-post: </label>
+                            <input type="email" id="email" name="email" required>
+                            <!-- Choices for choosing the days for seminar -->
+                            <fieldset class="ticket-choices"> <!-- Using "fieldset" for relating elements within a form -->
+                                <legend> Vilka dagar ska du delta? </legend> <!-- Using "legend" for explaining the title -->
+                                <div class="checkbox-label">
+                                    <input type="checkbox" id="day1" name="days" value="18">
+                                    <label for="day1">18 Oktober 2024</label>
+                                </div>
+                                <div class="checkbox-label">
+                                    <input type="checkbox" id="day2" name="days" value="19">
+                                    <label for="day2">19 Oktober 2024</label>
+                                </div>
+                                <div class="checkbox-label">
+                                    <input type="checkbox" id="day3" name="days" value="20">
+                                    <label for="day3">20 Oktober 2024</label>
+                                </div>
+                            </fieldset>
+                            <!-- Submit button button for buying the tickets -->
+                            <input type="submit" value="Köp biljett">
+                        </form>
+                    </div>
+                    <div class="ticket-included">
+                        <!-- What is included -->
+                        <h3> Vad som ingår </h3>
+                        <ul> <!-- Using "ul" for making a list -->
+                            <li> <img src="img/ghost-pink.png" alt=""> Tillgång till alla föreläsningar och workshops. </li>
+                            <li> <img src="img/title-pinkghost.png" alt=""> Lunch, eftermiddagsfika och middag under respektive dag. </li>
+                            <li> <img src="img/ghost-pink.png" alt=""> Drycker (kaffe, te, vatten, läsk). </li>
+                            <li> <img src="img/title-pinkghost.png" alt=""> Nätverksmöjligheter med andra utvecklare och branschledare. </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- Section: Kontakta oss -->
             <section id="contact">
-                <h2> Kontakta oss </h2>
-                <div class="contact-info"> <!-- Contact informations -->
-                    <h3> Kontaktinformation </h3>
-                    <ul>
-                        <li><strong> Hemsida: </strong> <a href="http://www.battrewebb2024.se"> www.battrewebb2024.se </a></li>
-                        <li><strong> E-post: </strong> <a href="mailto:info@battrewebb2024.se"> info@battrewebb2024.se </a></li>
-                        <li><strong> Telefon: </strong> +46 12 345 678 </li>
-                        <li><strong> Adress: </strong> Svenska Mässan, Mässans Gata 24, 412 51 Göteborg, Sverige </li>
-                    </ul>
-                </div>
-                <div class="social-media"> <!-- Social media -->
-                    <h3> Sociala medier </h3> 
-                    <ul>
-                        <li> Twitter: <a href="https://twitter.com/BättreWebb2024"> @BättreWebb2024 </a></li>
-                        <li> LinkedIn: <a href="https://linkedin.com/company/battrewebb2024"> linkedin.com/company/battrewebb2024 </a></li>
-                        <li> Instagram: <a href="https://instagram.com/battrewebbconf"> @battrewebbconf </a></li>
-                    </ul>
-                </div>
-                <div class="organizer"> <!-- Organizer -->
-                    <h3> Eventansvariga </h3>
-                    <ul>
-                        <li><strong> Photsathon Karlsson, Eventkoordinator </strong><br>
-                            E-post: <a href="mailto:photsathon.karlsson@battrewebb2024.se"> photsathon.karlsson@battrewebb2024.se </a><br> <!-- link to e-mail -->
-                            Telefon: +46 70 987 6543
-                        </li>
-                        <li><strong> Josefin Karlsson, Teknisk chef </strong><br>
-                            E-post: <a href="mailto:josefin.karlsson@battrewebb2024.se"> josefin.karlsson@battrewebb2024.se </a><br>
-                            Telefon: +46 70 123 9876
-                        </li>
-                    </ul>
+                <h2> Kontakta oss <img src="img/title-yellowghost.png" width="50px" height="50px" alt=""></h2>
+                <div class="contact-container">
+                    <div class="contact-betterweb">
+                        <p> Bättre Webb 2024 </p>
+                    </div>
+                    <div class="organizer"> <!-- Organizer -->    
+                        <div class="person">
+                            <ul>
+                                <li> Eventkoordinator </li>
+                                <li><img src="img/P.png" alt=""></li>
+                                <li> Photsathon Karlsson </li>
+                                <li> E-post: <a href="mailto:photsathon.karlsson@battrewebb2024.se"> photsathon.karlsson@battrewebb2024.se </a></li> <!-- link to e-mail -->
+                                <li> Telefon: +46 70 987 6543 </li>
+                            </ul>
+                        </div>
+                        <div class="person">
+                            <ul>
+                                <li> Teknisk chef </li>
+                                <li><img src="img/J.png" alt=""></li>
+                                <li> Josefin Karlsson </li>
+                                <li> E-post: <a href="mailto:josefin.karlsson@battrewebb2024.se"> josefin.karlsson@battrewebb2024.se </a></li> 
+                                <li> Telefon: +46 70 123 9876 </li>
+                            </ul>
+                        </div>
+                        <div class="person">
+                            <ul>
+                                <li> Teknisk chef </li>
+                                <li><img src="img/title-pacman.png" alt=""></li>
+                                <li> Mattias Karlsson </li>
+                                <li> E-post: <a href="mailto:mattias.karlsson@battrewebb2024.se"> mattias.karlsson@battrewebb2024.se </a></li> 
+                                <li> Telefon: +46 70 984 8468 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact-info"> <!-- Contact informations -->
+                        <ul>
+                            <h3> Kontaktinformation </h3>
+                            <li><img src="img/www.png" alt=""> <a href="http://www.battrewebb2024.se"> www.battrewebb2024.se </a></li>
+                            <li><img src="img/email.png" alt=""> <a href="mailto:info@battrewebb2024.se"> info@battrewebb2024.se </a></li>
+                            <li><img src="img/address.png" alt=""> Svenska Mässan, Mässans Gata 24, 412 51 Göteborg, Sverige </li>
+                        </ul>
+                    </div>
+                    <div class="social-media"> <!-- Social media -->
+                        <ul>
+                            <h3> Följ oss </h3>
+                            <li><img src="img/twitter.png" alt=""> <a href="https://twitter.com/BättreWebb2024"> @BättreWebb2024 </a></li>
+                            <li><img src="img/linkedin.png" alt=""> <a href="https://linkedin.com/company/battrewebb2024"> linkedin.com/company/battrewebb2024 </a> </a></li>
+                            <li><img src="img/instagram.png" alt=""> <a href="https://instagram.com/battrewebbconf"> @battrewebbconf </a></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer>
-
-    </footer>
 </body>
 </html>
