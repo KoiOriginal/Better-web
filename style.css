@@ -86,7 +86,7 @@ section {
 
 /* Name of menu list */
 .section-container .title-menu { /* title menu container*/
-    margin-top: 0.5em;
+    margin-top: 0%;
     
 	& > * { /* Select all direct child elements of the current parent element. */
 		width: 27em;
@@ -147,6 +147,7 @@ section {
     line-height: 3em;
     box-shadow: rgba(199, 147, 4, 0.35) 0px 5px 15px;
 } 
+
 /* Seminarier menu */
 section p {
     padding-top: 1em;
@@ -212,10 +213,19 @@ input, textarea, select {
     justify-content: space-between;   
 }
 .allergies-text1 {
-    margin: 2em;
-    padding: 1em;
+    margin: 1em;
+    padding: 0.5em;
     line-height: 1.5em;
 }
+.allergies-text1 img {
+    width: 150px;
+    height: 130px;
+    transition: transform 0.5s ease; /* Smooth transition for the image */
+}
+.allergies-text1 img:hover {
+    transform: translateX(20px); /* Moves the image 20px to the right when hovered */
+}
+
 textarea { /* Allergies text-box */
     width: 25em;
     height: 10em;
@@ -232,6 +242,9 @@ button {/* food allergies button */
 }
 button:hover {
     background-color: #097dac;
+}
+.food-form button {
+    margin: 2em;
 }
 
 /* Anmälan & Error message & Checkbox */
@@ -262,7 +275,7 @@ section .price-form { /* Tickets price & details container */
     justify-content: space-between;
 }
 .ticket-price { /* Tickets container */
-    margin: 2em;
+    margin: 1em;
     width: 20em;
 }
 .ticket {
