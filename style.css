@@ -85,12 +85,50 @@ section {
 }
 
 /* Name of menu list */
-.section-container h2 { /* title menu */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 0.5em;
-    padding: 0.5em;
-    display: inline-block;
-    text-align: center;
+.section-container .title-menu { /* title menu container*/
+    margin-top: 0.5em;
+    
+	& > * { /* Select all direct child elements of the current parent element. */
+		width: 27em;
+		height: 6em;
+        padding: 0.5em;
+        margin: 1em;
+        text-align: center;
+		/*border: 1px solid black;*/
+		background-color: rgb(222, 231, 248);
+		position: relative;
+		left: 0%;
+		transition: background-color 2.5s, left 4s;
+        background-color: black;
+        color: white;
+        border-radius: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.767) 0px 5px 15px;
+	}
+}
+.title-name {
+    transition-timing-function: ease-in;
+}
+.title-name h2 {
+    padding: 1em;
+}
+.title-menu img {
+    width: 60px;
+    height: 60px;
+}
+.title-menu:hover {
+	& > * {
+		background-color: rgb(81, 8, 124);
+	}
+	.title-name {
+		left: 77%;
+	}
+}
+.grow {
+    transform: scale(1.2); /* Making the element grow in size */
+    transition: all 0.3s ease; /* Smooth transition for the change */
 }
 
 /* Om Konferensen menu */
@@ -110,6 +148,9 @@ section {
     box-shadow: rgba(199, 147, 4, 0.35) 0px 5px 15px;
 } 
 /* Seminarier menu */
+section p {
+    padding-top: 1em;
+}
 .section-container .about-seminars {
     font-size: x-large; 
     text-align: center;
