@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Bättre Webb 2024 - Konferens </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">    
 </head>
 <body>
     <!-- Header -->
@@ -95,7 +95,7 @@
                         <form action="#" id="registration-form"> <!-- Creating "form" and "action" for the users input their informations -->
                             <!-- Namn -->
                             <label for="name"> Namn: </label>
-                            <input type="text" id="name" name="name" placeholder="Ange ditt namn" required minlength="2"> <!-- Required -->
+                            <input type="text" id="name-id" name="name" placeholder="Ange ditt namn" required minlength="2"> <!-- Required -->
                             <span class="error-message"> Ange minst två bokstäver. </span> <!-- Using "span" for applying styles or scripts to specific parts of text. -->
                             <!-- Age -->
                             <label for="age"> Ålder: </label>
@@ -111,7 +111,7 @@
                             <span class="error-message"> Ange nummer. </span>
                             <!-- E-mail address -->
                             <label for="email"> E-post: </label>
-                            <input type="text" id="email" name="email"  placeholder="name@example.com" required>
+                            <input type="text" id="email-id" name="email"  placeholder="name@example.com" required>
                             <span class="error-message"> Ange en giltig e-postadress. </span>
                         </form>
                     </div>
@@ -120,7 +120,7 @@
                             <legend> Matmeny </legend>
                             <form action="#" method="POST"> 
                                 <label for="food-menu"> <img class="img-food" src="img\food.png" alt="Image showing food menu"> Välj typ av mat:</label>
-                                <select name="food-menu" id="food-menu">
+                                <select name="food-menu" id="food-menu-id">
                                     <option value="Vegetarisk-meny"> (Vegetarisk meny) Grönsaksquiche </option>
                                     <option value="Vegetarisk-meny"> (Vegetarisk meny) Kikärtsbiffare </option>
                                     <option value="Vegetarisk-meny"> (Vegetarisk meny) Rostad grönsakssallad </option>
@@ -135,7 +135,7 @@
                             </form>
                             <form action="#" method="POST"> 
                                 <label for="food-menu"> <img class="img-food" src="img/drink.png" alt="Image showing beverage menu"> Dryckesalternativ & Fika: </label>
-                                <select name="food-menu" id="food-menu">
+                                <select name="food-menu" id="food-menu-id">
                                     <option value="Fika"> Småkakor (kolasnittar och mandelsnittar). </option>
                                     <option value="Fika"> Färsk frukt (äpple, banan, päron). </option>
                                     <option value="Fika"> Chokladbollar med havre. </option>
@@ -185,9 +185,9 @@
                     <div class="ticket-buying-container">
                         <h1> Köp biljett </h1>
                         <label for="name"> Fullständigt namn: </label>
-                        <input type="text" id="name" name="name">
+                        <input type="text" id="name-id" name="name">
                         <label for="email"> E-post: </label>
-                        <input type="email" id="email" name="email">
+                        <input type="text" id="email-id" name="email">
                         <!-- Choices for choosing the days for seminar -->
                         <fieldset class="ticket-choices"> <!-- Using "fieldset" for relating elements within a form -->
                             <legend> Vilka dagar ska du delta? </legend> <!-- Using "legend" for explaining the title -->
@@ -250,8 +250,8 @@
                         </div>
                         <div class="person">
                             <ul>
-                                <li> Teknisk chef </li>
-                                <li><img src="img/M.png" width="200px" height="200px" alt="Image of Mattias"></li>
+                                <li> Projektledare </li>
+                                <li><img src="img/M.png" alt="Image of Mattias"></li>
                                 <li> Mattias Karlsson </li>
                                 <li> E-post: <a href="mailto:mattias.karlsson@battrewebb2024.se"> mattias.karlsson@battrewebb2024.se </a></li> 
                                 <li> Telefon: +46 70 984 8468 </li>
@@ -268,7 +268,7 @@
                     <div class="social-media"> <!-- Social media -->
                         <ul>
                             <li><img src="img/twitter.png" alt="Image of twitter"> <a href="https://twitter.com/BättreWebb2024"> @BättreWebb2024 </a></li>
-                            <li><img src="img/linkedin.png" alt="Image of linkedin"> <a href="https://linkedin.com/company/battrewebb2024"> linkedin.com/company/battrewebb2024 </a> </a></li>
+                            <li><img src="img/linkedin.png" alt="Image of linkedin"> <a href="https://linkedin.com/company/battrewebb2024"> linkedin.com/company/battrewebb2024 </a></li>
                             <li><img src="img/instagram.png" alt="Image of instagram"> <a href="https://instagram.com/battrewebbconf"> @battrewebbconf </a></li>
                         </ul>
                     </div>
