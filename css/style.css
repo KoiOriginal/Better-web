@@ -11,22 +11,11 @@
 /* Header */
 header {
     color: white;
-    margin: 0%;
-    text-align: start; 
-    flex-grow: 1;  /* header covers all space */ 
-    width: 100%;
-    height: 250px;
-    display: block;
-    background-image: url('img/pacman-header.png');
-    background-size: cover; /* Adjust image size to cover the element */
-    background-position:left; /* Center the image */
-    background-repeat: no-repeat; /* Image is not repeating */
+    background-color: black;
+    text-align: center;
+    padding: 20px 0;
 }
 header h1 {
-    margin-left: 8.6em;
-    margin-top: 1em;
-    padding: 0%;
-    font-size: xxx-large;
     transition: transform 0.5s ease; /* Smooth transition for the image */
 }
 header h1:hover {
@@ -34,67 +23,49 @@ header h1:hover {
     cursor: pointer;
 } 
 
-/* Main */
-main {
-    padding: 20px;
-    display: flex; /* Using flex to manage layout */
-    width: 100%;
-    flex-wrap: wrap; /* Allow flex items to wrap */
-    height: auto; /* Change height to auto for responsiveness */
-}
-section {
-    padding-top: 1em;
-}
-.section-container {
-    flex: 2; /* flex box 2 */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    box-sizing: border-box; /* the size doesn't change when padding/border are added */  
-    margin-left: 18em;
-}
-
-/* Side navigation (Left menu) */
-.side-nav { 
-    width: 270px;  
-    background-color: black;  
-    color: white;
-    font-size: x-large;
-    position: fixed;
-    height: 100vh;
-    left: 0%;
-    top: 0%;
-}
-
-.side-nav ul {
+/* Nav */
+nav ul {
     list-style: none; /* no dot before text */
-    padding: 0;
-    margin: 0;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex; /* Use flexbox for making all items in a row */
+    justify-content: space-between; /* Space between items */
 }
-.side-nav ul li {
-    padding-inline: 1em;
+nav ul li {
+    display: inline;
+    margin-right: 10px;
 }
-.side-nav ul a {
+nav ul a {
     text-decoration: none;
-    margin: 3em 0; /* space between menu list */
     color: white;
-    display: block; /* to covering all */
 }
-.side-nav ul li a:hover {
+nav ul li a:hover {
     background-color: #474545;  /* change cursor style */
     border-radius: 0.5em;
 }
-.side-nav img {
+nav img {
     width: 55px;
     height: 55px;
     transition: transform 0.3s ease; /* Smooth transition for the image */
 }
-.side-nav img:hover {
+nav img:hover {
     transform: translateX(20px); /* Moves the image 20px to the right when hovered */
 } 
-.side-nav a {
+nav a {
     padding: 0.3em;
     margin: 0%;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    /*display: flex; /* Using flex to manage layout */
+    /*flex-wrap: wrap; /* Allow flex items to wrap */
+    /*height: auto; /* Change height to auto for responsiveness */
+}
+section {
+    padding: 1em;
 }
 
 /* Name of menu list */
@@ -135,7 +106,7 @@ section {
 	background-color: rgb(81, 8, 124);
 }
 .title-menu:hover .title-name {
-    left: 65%;
+    left: 70%;
 }
 .grow {
     transform: scale(1.2); /* Making the element grow in size */
@@ -144,16 +115,13 @@ section {
 
 /* Om Konferensen menu */
 .about-web img {
-    margin-left: 10em;
+    margin: 5px 0 0 100px; /* top, right, bottom, left */
     width: 50px;
     height: 50px;
 }
 .section-container .about-conference {
-    margin-top: 2em;
-    margin-bottom: 3em;
-    margin-left: 6em;
-    margin-right: 6em;
-    padding: 2em;
+    margin: 30px; 
+    padding: 20px;
     font-size: large;
     line-height: 3em;
     box-shadow: rgba(243, 168, 5, 0.35) 5px 5px 15px;
@@ -448,6 +416,34 @@ section li {
     height: 40px;
 }
 
+/* Footer */
+footer {
+    background-color: pink; 
+    text-align: center; 
+    padding: 10px; 
+    position: fixed; /* Fix the footer to the bottom */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Stretch to the left */
+    width: 100%; /* Full width */
+}
+.home-button {
+    background-color: black; 
+    border: none; /* No border */
+    color: white; /* White text */
+    padding: 10px 20px; 
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    font-size: x-large;
+    margin: 0; 
+    border-radius: 8px; 
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+.home-button:hover {
+    background-color: red; 
+    cursor: pointer;
+}
+
+
 /* Responsiv design */
 @media (max-width: 768px) /* 786px for mobile screen */ {
 
@@ -468,17 +464,17 @@ section li {
         width: 80px;
     } 
     /* nav */  
-    .side-nav { /* left nav menu */
+    nav { /* left nav menu */
         transform: translateX(-100%); /* Hide the left menu(nav) from screen */
         width: 200px; /* Reduce width for mobile screens */
         /*height: auto;
         /*height: 100%; /* Full hight menu */
         /*position: relative; /* Relative to stuck with main */
     }
-    .side-nav.open {
+    nav.open {
         transform: translateX(0); /* Show the left menu(nav) when open */
     }
-    .side-nav ul li {
+    nav ul li {
         font-size: large; 
         text-align: center;
     }
