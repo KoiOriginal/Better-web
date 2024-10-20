@@ -455,47 +455,4 @@ section li {
     header, main {
         padding: 10px;
     }
-
-    /* Stack main content on smaller screens */
-    main {
-        flex-direction: column; /* Change to column layout */
-    }
-
-    /* Make side navigation full-width on small screens */
-    .side-nav {
-        position: relative; /* Change to relative to stack with main */
-        width: 100%; /* Full width */
-        height: auto; /* Height auto */
-    }
-
-    /* Adjust h1 font size */
-    header h1 {
-        margin-left: 0; /* Center on small screens */
-        font-size: large; /* Smaller font size */
-    }
-
-    /* Adjust section-container margins */
-    .section-container {
-        margin-left: 0; /* Reset margin for smaller screens */
-        margin-top: 1em; /* Add some space */
-        padding: 0 1em; /* Add padding */
-    }
-
-    /* Adjust side-nav ul styles */
-    .side-nav ul {
-        font-size: large; /* Make the font size larger */
-    }
-    
-    /* Resize images for smaller screens */
-    .allergies-text1 img, .title-menu img {
-        width: 100px; /* Smaller image size */
-        height: auto; /* Maintain aspect ratio */
-    }
-    
-    /* Adjust text size for smaller screens */
-    .section-container .about-conference,
-    .section-container .about-seminars {
-        font-size: medium; /* Smaller text size */
-    }
 }
-/* Responsiv design */
