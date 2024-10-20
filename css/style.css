@@ -13,22 +13,25 @@ header {
     color: white;
     background-color: black;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px; 
 }
-header h1 {
+header h1{
+    font-size: xx-large;
     transition: transform 0.5s ease; /* Smooth transition for the image */
 }
-header h1:hover {
+header h1:hover{
     transform: translateY(30px); /* Moves down the text 30px when hovered */
     cursor: pointer;
 } 
 
 /* Nav */
+nav {
+    margin: 10px;
+    padding: 0 40px 0 40px; /* top, right, bottom, left */
+}
 nav ul {
     list-style: none; /* no dot before text */
-    margin-top: 60px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-top: 60px 60px 0 60px; /* top, right, bottom, left */
     display: flex; /* Use flexbox for making all items in a row */
     justify-content: space-between; /* Space between items */
 }
@@ -114,44 +117,46 @@ section {
 }
 
 /* Om Konferensen menu */
-.about-web img {
-    margin: 5px 0 0 100px; /* top, right, bottom, left */
+.about-conference {
+    margin: 40px 100px 55px 100px; /* top, right, bottom, left */
+    padding: 20px;
+    font-size: large;
+    line-height: 3.3em;
+    box-shadow: rgba(243, 168, 5, 0.35) 5px 5px 15px;
+    border-radius: 20px;
+} 
+.about-conference img {
     width: 50px;
     height: 50px;
 }
-.section-container .about-conference {
-    margin: 30px; 
-    padding: 20px;
-    font-size: large;
-    line-height: 3em;
-    box-shadow: rgba(243, 168, 5, 0.35) 5px 5px 15px;
-    border-radius: 0.5em;
-} 
-.section-container .about-conference:hover {
+.about-conference:hover {
     cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.164);
-    transform: translateY(15px); /* Moves the image 15px to go down when hovered */
+    background-color: rgba(128, 128, 128, 0.171);
+    transform: translateY(20px); /* Moves the image to go down when hovered */
 }
 
 /* Seminarier menu */
 section p {
     padding-top: 1em;
 }
-.section-container .about-seminars {
+.about-seminars {
     font-size: x-large; 
     text-align: center;
     margin-top: 0%;
 }
-.section-container .seminarier-box {
+.seminarier-box {
     display: flex;
     justify-content: space-between;
     height: 100vh;
+    margin: 20px;
+    padding: 20px;
 }
-.seminarier-box .seminarier-box1 {
+.seminarier-box1 {
     text-align: center;
     flex-grow: 1; /* making box as the same size */
+    margin: 10px;
 } 
-.section-container .seminarier-box2 { 
+.seminarier-box2 { 
    padding: 1em;
    font-size: medium;
    box-shadow: rgba(250, 2, 2, 0.35) 0px 5px 15px;
@@ -160,7 +165,7 @@ section p {
    line-height: 2.5em;
    width: 500px;
 }
-.section-container .seminarier-box2:hover {
+.seminarier-box2:hover {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.171);
 }
@@ -169,11 +174,11 @@ section p {
 .signup-container {
     display: flex;
     justify-content: space-between;
-    margin-right: 5em;
+    margin: 20px;
 }
 .signup-form {
-    width: 300px;
-    padding: 2em;
+    width: 200px;
+    padding: 10px 30px 10px 30px; /* top, right, bottom, left */
 }
 .signup-form, .food-form { /* signup & food form */
     margin: 0.5em;
@@ -202,13 +207,13 @@ input, textarea, select {
     justify-content: space-between;   
 }
 .allergies-text1 {
-    margin: 1em;
-    padding: 0.5em;
+    margin: 10px; /* top, right, bottom, left */
     line-height: 1.5em;
 }
 .allergies-text1 img {
-    width: 150px;
-    height: 130px;
+    width: 130px;
+    height: 100px;
+    padding-top: 20px;
     transition: transform 0.5s ease; /* Smooth transition for the image */
 }
 .allergies-text1 img:hover {
@@ -266,26 +271,30 @@ textarea:invalid + .error-message {
 }
 
 /* Priser för biljetter */
-section .price-form { /* Tickets price & details container */
+.price-form { /* Tickets price & details container */
     display: flex;
     justify-content: space-between;
+    margin: 0 100px 0 100px; /* top, right, bottom, left */
 }
 .ticket-price { /* Tickets container */ 
-    width: 20em;
+    width: 400px;
 }
 .ticket {
     border-radius: 5px;
     line-height: 1.8em;
-    padding: 1em;
-    margin: 1em;
+    padding: 20px;
+    margin: 25px;
     margin-bottom: 10px;
     box-shadow: rgba(217, 171, 221, 0.35) 0px -50px 36px -28px inset;
 }
 .price-ticket, .ticket-included h3 {
     font-weight: bold;
     color: #f6a4a2;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.459) 0px 7px 29px 0px;
     text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.582);
 }
 .ticket:hover {
     cursor: pointer;
@@ -299,9 +308,6 @@ section .price-form { /* Tickets price & details container */
     border-radius: 5px;
 }
 .checkbox-label { /* checkbox */
-    /*display: flex;
-    justify-content: flex-start;
-    align-items: center; */
     margin-bottom: 10px; /* Add spacing between each checkbox */
 }
 input[type="text"], input[type="email"], select {
@@ -339,10 +345,11 @@ input[type="submit"]:hover {
 } 
 
 /* Contact */
-section .contact-container {
+.contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns */
     grid-template-rows: auto auto; /* Two rows */
+    padding: 10px 0 10px 0; /* top, right, bottom, left */
 }
 .contact-betterweb {
     font-size: x-large;
@@ -351,12 +358,14 @@ section .contact-container {
 }
 .contact-info {
     grid-column: 1;
+    padding-left: 70px;
 }
 .organizer {
     grid-column: span 2; /* Spanning both columns */
 }
 .social-media {
     grid-column: 2; 
+    padding-left: 180px;
 }
 .contact-betterweb, .contact-info, .organizer, .social-media {
     display: flex;
@@ -364,7 +373,7 @@ section .contact-container {
     align-items: center;
     line-height: 2em;
 }
-.contact-info img {
+.contact-info img, .social-media img {
     width: 50px;
     height: 50px;
 } 
@@ -393,8 +402,8 @@ section li {
     width: 100%;
 }
 .person {
-    padding: 1em;
-    margin: 1em;
+    padding: 20px;
+    margin: 0 10px 20px 10px; /* top, right, bottom, left */
     text-align: center;
     box-shadow: rgba(194, 149, 3, 0.35) 0px 5px 15px;
     border-radius: 2em;
@@ -411,14 +420,9 @@ section li {
     grid-template-columns: 1fr 1fr; /* Two columns */
     grid-template-rows: auto auto; /* Two rows */
 }
-.social-media img {
-    width: 40px;
-    height: 40px;
-}
 
 /* Footer */
 footer {
-    background-color: pink; 
     text-align: center; 
     padding: 10px; 
     position: fixed; /* Fix the footer to the bottom */
@@ -437,9 +441,11 @@ footer {
     margin: 0; 
     border-radius: 8px; 
     transition: background-color 0.3s; /* Transition for hover effect */
+    box-shadow: rgba(0, 0, 0, 0.575) 0px 5px 15px;
 }
 .home-button:hover {
     background-color: red; 
+    color: black;
     cursor: pointer;
 }
 
