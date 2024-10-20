@@ -1,0 +1,22 @@
+https://github.com/KoiOriginal/Better-web/tree/main
+
+https://koioriginal.github.io/Better-web/
+
+Bättre webb
+Individuell inlämningsuppgift, HTML och CSS
+Photsathon Karlsson
+
+Code review
+Matmeny
+•	Grupp code review: Det blir lättare för användarna om jag ändrar matmenyn från "check box" till "option" meny. Jag har många maträtter, och det blir för mycket detaljer annars.
+•	Lärare code review: Jag borde lägga registreringen och matmenyn på samma sida, så det blir lättare för användarna att fylla i all information på en gång.
+Bildbakgrund
+•	Grupp code review: Försök använda olika stilar för bakgrunden.
+Matallergi-menystil
+•	Grupp code review: Ändra allergimenyn från "check box" till ”textarea”, så att användarna kan skriva in sina specifika allergier.
+Sätt menyerna tillsammans
+•	Lärare code review: Jag borde sätta menyerna "Hem", "Om konferensen", "Anmälan" och "Matmeny" tillsammans för att göra det enklare för användarna.
+/action_page.php
+•	Lärare code review: Jag borde använda en falsk länk.
+Anmälningssidan 
+•	Lärare code review: Telefonnummer-boxen bör använda <input type="text" …> istället för <input type="number" …> eftersom det behövs för att kunna skriva in fler än 2 siffror.

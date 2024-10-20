@@ -448,27 +448,65 @@ section li {
     height: 40px;
 }
 
+/* Responsiv design */
+@media (max-width: 768px) /* 786px for mobile screen */ {
 
-@media only screen and (max-width: 600px) {
-/* Header */
-header {
-    color: white;
-    margin: 0px;
-    text-align: start; 
-    flex-grow: 1;  /* header covers all space */ 
-    width: 100%;
-    height: 250px;
-    display: block;
-    background-image: none;
-    
-}
-header h1 {
-    margin-left: 8.6em;
-    margin-top: 1em;
-    padding: 0%;
-    font-size: xxx-large;
-    display: inline-block;
-    
-}
-
+    /* Header */
+    header {
+        padding: 10px;
+        margin: 10px;
+        width: auto;
+        height: 150px;
+    }
+    header h1 {
+        margin: 10px;
+        font-size: 10vw; /* Larger font size for mobile screens */
+    }
+    /* Main */
+    main {
+        /*flex-direction: column; /* column layout */
+        width: 80px;
+    } 
+    /* nav */  
+    .side-nav { /* left nav menu */
+        transform: translateX(-100%); /* Hide the left menu(nav) from screen */
+        width: 200px; /* Reduce width for mobile screens */
+        /*height: auto;
+        /*height: 100%; /* Full hight menu */
+        /*position: relative; /* Relative to stuck with main */
+    }
+    .side-nav.open {
+        transform: translateX(0); /* Show the left menu(nav) when open */
+    }
+    .side-nav ul li {
+        font-size: large; 
+        text-align: center;
+    }
+    .title-menu img {
+        width: 100px; 
+        height: auto; 
+    }
+    .section-container .about-conference,
+    .section-container .about-seminars {
+        font-size: medium; /* Smaller text size for mobile screens */
+    }
+    /* Om Konferense */
+    .about-web img { /* Reduce them for mobile screens */
+        margin-left: 1em; 
+        width: 40px; 
+        height: 40px;
+    }
+    .section-container .about-conference { /* Reduce them for mobile screens */
+        margin-left: 1em; 
+        margin-right: 1em;
+        padding: 1em; 
+        font-size: medium; 
+    }
+    /* Seminarier */
+    .section-container .about-seminars { /* Reduce them for mobile screens */
+        font-size: large; 
+    }
+    .section-container .seminarier-box2 {
+        width: 90%; 
+    }
 }
