@@ -14,8 +14,10 @@ header {
     background-color: black;
     text-align: center;
     padding: 20px; 
+    width: 100%;
 }
 header h1{
+    margin: 20px;
     font-size: xx-large;
     transition: transform 0.5s ease; /* Smooth transition for the image */
 }
@@ -26,7 +28,6 @@ header h1:hover{
 
 /* Nav */
 nav {
-    margin: 10px;
     padding: 0 40px 0 40px; /* top, right, bottom, left */
 }
 nav ul {
@@ -358,7 +359,9 @@ input[type="submit"]:hover {
 }
 .contact-info {
     grid-column: 1;
-    padding-left: 70px;
+    font-size: medium;
+    padding: 10px; 
+    margin-left: 30px;
 }
 .organizer {
     grid-column: span 2; /* Spanning both columns */
@@ -373,7 +376,7 @@ input[type="submit"]:hover {
     align-items: center;
     line-height: 2em;
 }
-.contact-info img, .social-media img {
+.contact-info img {
     width: 50px;
     height: 50px;
 } 
@@ -415,11 +418,6 @@ section li {
     transform: translateY(20px); /* Moves the image 20px to go down when hovered */
     cursor: pointer;
 }
-.social-media { /* Social media container */
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    grid-template-rows: auto auto; /* Two rows */
-}
 
 /* Footer */
 footer {
@@ -429,9 +427,10 @@ footer {
     bottom: 0; /* Position it at the bottom */
     left: 0; /* Stretch to the left */
     width: 100%; /* Full width */
+    background-color: black;
 }
 .home-button {
-    background-color: black; 
+    background-color: red; 
     border: none; /* No border */
     color: white; /* White text */
     padding: 10px 20px; 
@@ -444,9 +443,31 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.575) 0px 5px 15px;
 }
 .home-button:hover {
-    background-color: red; 
+    background-color: gray; 
     color: black;
     cursor: pointer;
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+.social-media ul { 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.social-media li {
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+.social-media a {
+    text-decoration: none;
+    color: white;
+}
+.social-media img {
+    width: 30px;
+    height: 30px;
 }
 
 
