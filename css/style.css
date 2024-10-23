@@ -118,13 +118,17 @@ section {
 }
 
 /* Om Konferensen menu */
+.about-web {
+    margin-top: 30px;
+}
 .about-conference {
-    margin: 40px 100px 55px 100px; /* top, right, bottom, left */
-    padding: 20px;
+    margin: 30px 100px 55px 100px; /* top, right, bottom, left */
+    padding: 20px 30px 20px 30px;
     font-size: large;
     line-height: 3.3em;
-    box-shadow: rgba(243, 168, 5, 0.35) 5px 5px 15px;
+    box-shadow: rgba(243, 168, 5, 0.548) 5px 5px 15px;
     border-radius: 20px;
+    border: 1px solid #fdbe11;
 } 
 .about-conference img {
     width: 50px;
