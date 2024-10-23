@@ -243,7 +243,7 @@ button:hover {
     margin: 2em;
 }
 .signup-container form {
-    line-height: 2em;
+    line-height: 1.8em;
 }
 .allergies-text1 h3 {
     color: red;
@@ -356,6 +356,7 @@ input[type="submit"]:hover {
     font-size: x-large;
     grid-column: 1 / 3;
     justify-self: center;
+    margin: 20px;
 }
 .contact-info {
     grid-column: 1;
@@ -430,36 +431,25 @@ footer {
     background-color: black;
 }
 .home-button {
-    background-color: red; 
-    border: none; /* No border */
-    color: white; /* White text */
-    padding: 10px 20px; 
+    background-color: #fdbe11; 
+    color: black; 
+    border: none; 
+    padding: 10px; 
     text-decoration: none; /* Remove underline */
     display: inline-block;
     font-size: x-large;
-    margin: 0; 
+    margin: 20px 20px 10px 10px; /* top, right, bottom, left */
     border-radius: 8px; 
     transition: background-color 0.3s; /* Transition for hover effect */
-    box-shadow: rgba(0, 0, 0, 0.575) 0px 5px 15px;
+    box-shadow: rgba(252, 250, 250, 0.849) 0px 5px 15px;
 }
 .home-button:hover {
-    background-color: gray; 
-    color: black;
+    background-color: red; 
     cursor: pointer;
 }
 .social-media {
     display: flex;
     justify-content: center;
-}
-.social-media ul { 
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-.social-media li {
-    margin: 0 10px;
-    padding: 5px 10px;
 }
 .social-media a {
     text-decoration: none;
@@ -468,6 +458,9 @@ footer {
 .social-media img {
     width: 30px;
     height: 30px;
+}
+footer fieldset {
+    margin-right: 20px; /* top, right, bottom, left */
 }
 
 
