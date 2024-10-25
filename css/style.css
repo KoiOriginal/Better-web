@@ -485,5 +485,9 @@ footer fieldset {
         grid-template-columns: 1fr;
     }
 }
-
+@media (min-width: 768px) and (max-width: 1024px) { /* size for taplet */
+    nav ul {
+        justify-content: space-around; 
+    }
+}
 
