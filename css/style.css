@@ -64,9 +64,6 @@ nav a {
 /* Main */
 main {
     padding: 20px;
-    /*display: flex; /* Using flex to manage layout */
-    /*flex-wrap: wrap; /* Allow flex items to wrap */
-    /*height: auto; /* Change height to auto for responsiveness */
 }
 section {
     padding: 1em;
@@ -469,42 +466,24 @@ footer fieldset {
 
 
 /* Responsiv design */
-@media (max-width: 768px) /* 786px for mobile screen */ {
-
-    header, main, footer {
-        width: 90%;
-        margin: 10px;
-    }
-    /* Header */
+@media (max-width: 768px) { /* size for mobile phone */
     header h1 {
-        margin: 10px;
-        font-size: 10vw; /* Larger font size for mobile screens */
+        font-size: large;
     }
-   
-    /* nav */  
-    nav { /* left nav menu */
-        width: 90%; /* Reduce width for mobile screens */
-        /*height: auto;
-        /*height: 100%; /* Full hight menu */
-        /*position: relative; /* Relative to stuck with main */
+    nav ul {
+        flex-direction: column; 
+        align-items: center;
     }
-    nav ul li {
-        font-size: large; 
-        text-align: center;
+    .signup-container {
+        flex-direction: column;
+        align-items: center;
     }
-    .section-container .about-conference,
-    .section-container .about-seminars {
-        font-size: medium; /* Smaller text size for mobile screens */
+    .price-form {
+        flex-direction: column;
     }
-    /* Om Konferense */
-    .section-container .about-conference { /* Reduce them for mobile screens */
-        font-size: medium; 
-    }
-    /* Seminarier */
-    .section-container .about-seminars { /* Reduce them for mobile screens */
-        font-size: large; 
-    }
-    .section-container .seminarier-box2 {
-        width: 90%; 
+    .contact-container {
+        grid-template-columns: 1fr;
     }
 }
+
+
