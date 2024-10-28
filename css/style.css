@@ -1,87 +1,111 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 /* import google font */
-/* * for all */
-* {
+* { /* "*" for all */
     box-sizing: border-box;
     font-family: "Roboto Mono", monospace;    
     font-weight: 500;
     font-style: normal; 
 }
-
 /* Header */
 header {
     color: white;
-    background-color: black;
-    text-align: center;
-    padding: 20px; 
+    margin: 0%;
+    text-align: start; 
+    flex-grow: 1;  /* header covers all space */ 
     width: 100%;
+    height: 250px;
+    display: block;
+    background-image: url('../img/pacman-header.png');
+    background-size: cover; /* Adjust image size to cover the element */
+    background-position:left; /* Center the image */
+    background-repeat: no-repeat; /* Image is not repeating */
 }
-header h1{
-    margin: 20px;
-    font-size: xx-large;
+header h1 {
+    margin-left: 8.6em;
+    margin-top: 1em;
+    padding: 0%;
+    font-size: xxx-large;
     transition: transform 0.5s ease; /* Smooth transition for the image */
 }
-header h1:hover{
+header h1:hover {
     transform: translateY(30px); /* Moves down the text 30px when hovered */
     cursor: pointer;
 } 
-
-/* Nav */
-nav {
-    padding: 0 40px 0 40px; /* top, right, bottom, left */
+/* Main */
+main {
+    padding: 20px;
+    display: flex; /* Using flex to manage layout */
+    width: 100%;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    height: auto; /* Change height to auto for responsiveness */
 }
-nav ul {
+section {
+    padding-top: 1em;
+}
+.section-container {
+    flex: 2; /* flex box 2 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box; /* the size doesn't change when padding/border are added */  
+    margin-left: 18em;
+}
+/* Side navigation (Left menu) */
+.side-nav { 
+    width: 220px;  
+    font-size: x-large;
+    position: fixed; 
+    left: 0%;
+    top: 0%;  
+    margin: 350px 0 0 25px; /* top-right-bottom-left */
+}
+.side-nav ul {
     list-style: none; /* no dot before text */
-    margin-top: 60px 60px 0 60px; /* top, right, bottom, left */
-    display: flex; /* Use flexbox for making all items in a row */
-    justify-content: space-between; /* Space between items */
+    padding: 0;
+    margin: 0;
 }
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+.side-nav ul li {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: black;  
 }
-nav ul a {
+.side-nav ul a {
     text-decoration: none;
+    display: block; /* to covering all */
     color: white;
 }
-nav ul li a:hover {
+.side-nav ul li a:hover {
     background-color: #474545;  /* change cursor style */
-    border-radius: 0.5em;
+    border-radius: 10px;
+    color: white;
 }
-nav img {
+.side-nav img {
     width: 55px;
     height: 55px;
     transition: transform 0.3s ease; /* Smooth transition for the image */
 }
-nav img:hover {
+.side-nav img:hover {
     transform: translateX(20px); /* Moves the image 20px to the right when hovered */
 } 
-nav a {
-    padding: 0.3em;
+.side-nav a {
+    padding: 0;
     margin: 0%;
 }
-
-/* Main */
-main {
-    padding: 20px;
-}
-section {
-    padding: 1em;
-}
-
 /* Name of menu list */
 .section-container .title-menu > * { /* title menu container*/
 /* (>*) Select all direct child elements of the current parent element. */
     margin-top: 0%;
-	width: 32em;
-	height: 6em;
+    width: 32em;
+    height: 6em;
     padding: 0.5em;
     margin: 1em;
     text-align: center;
-	background-color: rgb(222, 231, 248);
-	position: relative;
-	left: 0%;
-	transition: background-color 2.5s, left 4s;
+    background-color: rgb(222, 231, 248);
+    position: relative;
+    left: 0%;
+    transition: background-color 2.5s, left 4s;
     background-color: black;
     color: white;
     border-radius: 1.5em;
@@ -104,61 +128,56 @@ section {
     height: 60px;
 }
 .title-menu:hover > * {
-	background-color: rgb(81, 8, 124);
+    background-color: rgb(81, 8, 124);
 }
 .title-menu:hover .title-name {
-    left: 70%;
+    left: 65%;
 }
 .grow {
     transform: scale(1.2); /* Making the element grow in size */
     transition: all 0.3s ease; /* Smooth transition for the change */
 }
-
 /* Om Konferensen menu */
-.about-web {
-    margin-top: 30px;
-}
-.about-conference {
-    margin: 30px 100px 55px 100px; /* top, right, bottom, left */
-    padding: 20px 30px 20px 30px;
-    font-size: large;
-    line-height: 3.3em;
-    box-shadow: rgba(243, 168, 5, 0.548) 5px 5px 15px;
-    border-radius: 20px;
-    border: 1px solid #fdbe11;
-} 
-.about-conference img {
+.about-web img {
+    margin-left: 10em;
     width: 50px;
     height: 50px;
 }
-.about-conference:hover {
+.section-container .about-conference {
+    margin-top: 2em;
+    margin-bottom: 3em;
+    margin-left: 6em;
+    margin-right: 6em;
+    padding: 2em;
+    font-size: large;
+    line-height: 3em;
+    box-shadow: rgba(243, 168, 5, 0.35) 5px 5px 15px;
+    border-radius: 0.5em;
+} 
+.section-container .about-conference:hover {
     cursor: pointer;
-    background-color: rgba(128, 128, 128, 0.171);
-    transform: translateY(20px); /* Moves the image to go down when hovered */
+    background-color: rgba(128, 128, 128, 0.164);
+    transform: translateY(15px); /* Moves the image 15px to go down when hovered */
 }
-
 /* Seminarier menu */
 section p {
     padding-top: 1em;
 }
-.about-seminars {
+.section-container .about-seminars {
     font-size: x-large; 
     text-align: center;
     margin-top: 0%;
 }
-.seminarier-box {
+.section-container .seminarier-box {
     display: flex;
     justify-content: space-between;
     height: 100vh;
-    margin: 20px;
-    padding: 20px;
 }
-.seminarier-box1 {
+.seminarier-box .seminarier-box1 {
     text-align: center;
     flex-grow: 1; /* making box as the same size */
-    margin: 10px;
 } 
-.seminarier-box2 { 
+.section-container .seminarier-box2 { 
    padding: 1em;
    font-size: medium;
    box-shadow: rgba(250, 2, 2, 0.35) 0px 5px 15px;
@@ -167,20 +186,19 @@ section p {
    line-height: 2.5em;
    width: 500px;
 }
-.seminarier-box2:hover {
+.section-container .seminarier-box2:hover {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.171);
 }
-
 /* Anmälan menu */
 .signup-container {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin-right: 5em;
 }
 .signup-form {
-    width: 200px;
-    padding: 10px 30px 10px 30px; /* top, right, bottom, left */
+    width: 300px;
+    padding: 2em;
 }
 .signup-form, .food-form { /* signup & food form */
     margin: 0.5em;
@@ -209,20 +227,19 @@ input, textarea, select {
     justify-content: space-between;   
 }
 .allergies-text1 {
-    margin: 10px; /* top, right, bottom, left */
+    margin: 1em;
+    padding: 0.5em;
     line-height: 1.5em;
 }
 .allergies-text1 img {
-    width: 130px;
-    height: 100px;
-    padding-top: 20px;
+    width: 150px;
+    height: 130px;
     transition: transform 0.5s ease; /* Smooth transition for the image */
 }
 .allergies-text1 img:hover {
     transform: translateX(20px); /* Moves the image 20px to the right when hovered */
     cursor: pointer;
 }
-
 textarea { /* Allergies text-box */
     width: 25em;
     height: 10em;
@@ -244,12 +261,11 @@ button:hover {
     margin: 2em;
 }
 .signup-container form {
-    line-height: 1.8em;
+    line-height: 2em;
 }
 .allergies-text1 h3 {
     color: red;
 }
-
 /* Anmälan & Error message & Checkbox */
 input:invalid, textarea:invalid {
     background-color: ivory;
@@ -271,32 +287,27 @@ textarea:invalid + .error-message {
     margin: 1em;
     padding: 1em;
 }
-
 /* Priser för biljetter */
-.price-form { /* Tickets price & details container */
+section .price-form { /* Tickets price & details container */
     display: flex;
     justify-content: space-between;
-    margin: 0 100px 0 100px; /* top, right, bottom, left */
 }
 .ticket-price { /* Tickets container */ 
-    width: 400px;
+    width: 20em;
 }
 .ticket {
     border-radius: 5px;
     line-height: 1.8em;
-    padding: 15px;
-    margin: 25px;
-    margin: 20px 10px 20px 10px; /* top, right, bottom, left */
+    padding: 1em;
+    margin: 1em;
+    margin-bottom: 10px;
     box-shadow: rgba(217, 171, 221, 0.35) 0px -50px 36px -28px inset;
 }
 .price-ticket, .ticket-included h3 {
     font-weight: bold;
     color: #f6a4a2;
-    box-shadow: rgba(100, 100, 111, 0.459) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     text-align: center;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgba(128, 128, 128, 0.582);
 }
 .ticket:hover {
     cursor: pointer;
@@ -345,32 +356,25 @@ input[type="submit"]:hover {
     transform: translateX(20px); /* Moves the image 20px to the right when hovered */
     cursor: pointer;
 } 
-
 /* Contact */
-.contact-container {
+section .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns */
     grid-template-rows: auto auto; /* Two rows */
-    padding: 10px 0 10px 0; /* top, right, bottom, left */
 }
 .contact-betterweb {
     font-size: x-large;
     grid-column: 1 / 3;
     justify-self: center;
-    margin: 20px;
 }
 .contact-info {
     grid-column: 1;
-    font-size: medium;
-    padding: 10px; 
-    margin: 20px;
 }
 .organizer {
     grid-column: span 2; /* Spanning both columns */
 }
 .social-media {
     grid-column: 2; 
-    padding-left: 180px;
 }
 .contact-betterweb, .contact-info, .organizer, .social-media {
     display: flex;
@@ -407,8 +411,8 @@ section li {
     width: 100%;
 }
 .person {
-    padding: 20px;
-    margin: 0 10px 20px 10px; /* top, right, bottom, left */
+    padding: 1em;
+    margin: 1em;
     text-align: center;
     box-shadow: rgba(194, 149, 3, 0.35) 0px 5px 15px;
     border-radius: 2em;
@@ -420,348 +424,70 @@ section li {
     transform: translateY(20px); /* Moves the image 20px to go down when hovered */
     cursor: pointer;
 }
-
-/* Footer */
-footer {
-    text-align: center; 
-    padding: 10px; 
-    position: fixed; /* Fix the footer to the bottom */
-    bottom: 0; /* Position it at the bottom */
-    left: 0; /* Stretch to the left */
-    width: 100%; /* Full width */
-    background-color: black;
-}
-.home-button {
-    background-color: #fdbe11; 
-    color: black; 
-    border: none; 
-    padding: 10px; 
-    text-decoration: none; /* Remove underline */
-    display: inline-block;
-    font-size: x-large;
-    margin: 20px 20px 10px 10px; /* top, right, bottom, left */
-    border-radius: 8px; 
-    transition: background-color 0.3s; /* Transition for hover effect */
-    box-shadow: rgba(252, 250, 250, 0.849) 0px 5px 15px;
-}
-.home-button:hover {
-    background-color: red; 
-    cursor: pointer;
-}
-.social-media {
-    display: flex;
-    justify-content: center;
-}
-.social-media a {
-    text-decoration: none;
-    color: white;
+.social-media { /* Social media container */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: auto auto; /* Two rows */
 }
 .social-media img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
-footer fieldset {
-    margin-right: 20px; /* top, right, bottom, left */
-}
-
-
 /* Responsiv design */
-@media (max-width: 768px) { /* for taplet */
-    /* header */
-    header { 
-        padding: 15px;
-    }
-    header h1 {
-        font-size: large;
-        margin: 15px;
-    }
-    /* nav */
-    nav {
-        padding: 0 20px; /* Reduced margin for smaller screens */
-    }
-    nav ul {
-        flex-direction: column; 
-        align-items: center;
-        margin: 30px 0 0 0; /* top, right, bottom, left */
-    }
-    nav ul li {
-        margin: 5px 0;
-    }
-    nav img {
-        width: 45px;
-        height: 45px;
-    }
-    /* Main and Name of menu list */
-    .section-container .title-menu > * {
-        width: 24em;
-        height: 5em;
-        padding: 0.4em;
-        margin: 0.5em;
-        border-radius: 1em;
-    }
-    .title-name h2 {
-        font-size: 1.2em;
-        padding: 0.8em;
-    }
-    .title-menu img {
-        width: 50px;
-        height: 50px;
-    }
-    /* Om Konferensen menu */
-    .about-conference {
-        margin: 20px 50px 40px 50px; /* top, right, bottom, left */
-        padding: 15px 20px; 
-        font-size: medium; 
-        line-height: 2.5em;
-    }
-    .about-conference img {
-        width: 40px;
-        height: 40px;
-    }
-    /* Seminarier menu */
-    .seminarier-box {
-        flex-direction: column; 
-        height: auto;
-        padding: 15px;
-    }
-    .seminarier-box2 {
-        width: 100%; 
-        padding: 0.8em;
-        font-size: large;
-        line-height: 2em;
-        margin-bottom: 15px;
-    }
-    .about-seminars {
-        font-size: large;
-    }
-    /* Anmälan menu */
-    .signup-container {
-        flex-direction: column; 
-        align-items: center;
-    }
-    .signup-form, .food-form {
-        width: 80%; 
-        padding: 10px 15px;
-    }
-    .allergies-text1 img {
-        width: 100px;
-        height: 80px;
-    }
-    textarea {
-        width: 100%;
-        height: 8em;
-    }
-    /* Anmälan & Error message & Checkbox */
-    input:invalid, textarea:invalid {
-        background-color: ivory;
-        border-color: red;
-    }
-    .error-message {
-        display: none;
-        color: red;
-    }
-    input:invalid + .error-message,
-    textarea:invalid + .error-message {
-        display: block;
-    }
-    .signup a {
-        text-decoration: none;
-        color: rgb(70, 70, 182);
-        border: rgb(70, 70, 182) solid 2px;
-        border-radius: 5px;
-        margin: 1em;
-        padding: 1em;
-    }
-    /* Priser för biljetter */
-    .price-form {
-        flex-direction: column; 
-        margin: 0 20px;
-    }
-    .ticket-price, .ticket-buying-container {
-        width: 90%;
-        margin: 10px auto;
-    }
-    .ticket-included {
-        width: 100%;
-    }
-    /* Contact */
-    .contact-container {
-        grid-template-columns: 1fr; /* 1 column for taplet */
+@media (max-width: 768px) /* 786px for mobile screen */ {
+    /* Header */
+    header {
         padding: 10px;
-    }
-    .social-media {
-        padding-left: 0; 
-    }
-    .contact-betterweb {
-        font-size: large; 
-    }
-    .person img {
-        width: 120px;
-        height: 120px; 
-    }
-    /* Footer */
-    .home-button {
-        font-size: large; 
-        padding: 8px; 
-    }
-    .social-media img {
-        width: 25px;
-        height: 25px; 
-    }
-}
-
-@media (max-width: 480px) { /* for mobile phone */
-    /* header */
-    header { 
-        padding: 10px;
-    }
-    header h1 {
-        font-size: medium;
         margin: 10px;
+        width: auto;
+        height: 150px;
     }
-    /* nav */
-    nav {
-        padding: 0 10px;
+    header h1 {
+        margin: 10px;
+        font-size: 10vw; /* Larger font size for mobile screens */
     }
-    nav ul {
-        margin: 20px 0 0 0; /* top, right, bottom, left */
-    }
-    nav ul li {
-        margin: 3px 0;
-    }
-    nav img {
-        width: 35px;
-        height: 35px;
-    }
-    /* Main and Name of menu list */
+    /* Main */
     main {
-        padding: 10px;
+        /*flex-direction: column; /* column layout */
+        width: 80px;
+    } 
+    /* nav */  
+    .side-nav { /* left nav menu */
+        transform: translateX(-100%); /* Hide the left menu(nav) from screen */
+        width: 200px; /* Reduce width for mobile screens */
     }
-    .section-container .title-menu > * {
-        width: 18em;
-        height: 4em;
-        padding: 0.3em;
-        margin: 0.5em;
-        border-radius: 0.8em;
+    .side-nav.open {
+        transform: translateX(0); /* Show the left menu(nav) when open */
     }
-    .title-name h2 {
-        font-size: 1em;
-        padding: 0.5em;
+    .side-nav ul li {
+        font-size: large; 
+        text-align: center;
     }
     .title-menu img {
-        width: 40px;
+        width: 100px; 
+        height: auto; 
+    }
+    .section-container .about-conference,
+    .section-container .about-seminars {
+        font-size: medium; /* Smaller text size for mobile screens */
+    }
+    /* Om Konferense */
+    .about-web img { /* Reduce them for mobile screens */
+        margin-left: 1em; 
+        width: 40px; 
         height: 40px;
     }
-    /* Om Konferensen menu */
-    .about-conference {
-        margin: 15px 20px 30px 20px; /* top, right, bottom, left */
-        padding: 10px 15px;
-        font-size: small;
-        line-height: 2em;
-        border-radius: 15px;
-    }
-    .about-conference img {
-        width: 30px;
-        height: 30px;
-    }
-    /* Seminarier menu */
-    .seminarier-box {
-        margin: 10px;
-        padding: 10px;
-    }
-    .seminarier-box2 {
-        width: 100%;
-        padding: 0.5em;
-        font-size: medium;
-        line-height: 1.8em;
-        border-radius: 0.8em;
-    }
-    .about-seminars {
-        font-size: medium;
-    }
-    /* Anmälan menu */
-    .signup-container {
-        margin: 10px;
-        padding: 10px;
-    }
-    .signup-form, .food-form {
-        width: 100%;
-        padding: 5px;
-    }
-    .allergies-text1 img {
-        width: 80px;
-        height: 60px;
-    }
-    textarea {
-        width: 100%;
-        height: 6em;
-    }
-    button {
-        padding: 8px 12px;
-    }
-    /* Anmälan & Error message & Checkbox */
-    .error-message {
-        font-size: x-small; 
-        margin: 0.5em;
-    }
-    .signup a {
-        margin: 0.5em;
-        padding: 0.5em;
-        font-size: small;
-        border-radius: 4px; 
-    }
-    /* Priser för biljetter */
-    .price-form {
-        flex-direction: column;
-        margin: 0 10px;
-    }
-    .ticket-price, .ticket-buying-container {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-    }
-    .ticket {
-        padding: 10px;
-    }
-    input[type="submit"] {
-        padding: 8px;
-        font-size: small; 
-    }
-    .ticket-included {
-        margin: 1em 0;
-        padding: 0.5em;
-    }
-    .ticket-included img {
-        width: 40px;
-        height: 30px;
-    }
-    /* Contact */
-    .contact-container {
-        padding: 5px;
-    }
-    .contact-betterweb {
-        font-size: medium;
-    }
-    .contact-info, .organizer, .social-media {
-        padding: 5px; 
-    }
-    .person img {
-        width: 100px;
-        height: 100px;
-    }
-    /* Footer */
-    footer {
-        padding: 5px; 
-    }
-    .home-button {
+    .section-container .about-conference { /* Reduce them for mobile screens */
+        margin-left: 1em; 
+        margin-right: 1em;
+        padding: 1em; 
         font-size: medium; 
-        padding: 6px; 
     }
-    .social-media {
-        flex-direction: column; 
+    /* Seminarier */
+    .section-container .about-seminars { /* Reduce them for mobile screens */
+        font-size: large; 
     }
-    .social-media img {
-        width: 20px;
-        height: 20px; 
+    .section-container .seminarier-box2 {
+        width: 90%; 
     }
 }

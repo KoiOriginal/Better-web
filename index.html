@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -11,31 +12,31 @@
     <header>
         <section id="home">
             <h1> Bättre Webb 2024 </h1>   
-        </section> 
-        <nav> <!-- Create "nav" to display various menus -->
+        </section>  
+    </header>
+    <!-- Main -->
+    <main>
+        <nav class="side-nav"> <!-- Create "nav" to display various menus -->
             <ul>
                 <li><a href="#home"> <img src="img/pacman.png" alt="Packman image in nav menu"> Hem </a></li>
-                <li><a href="#seminars"> <img src="img/ghost-red.png" alt="Red-ghost image in nav menu"> Seminarier </a></li>
+                <li><a href="#seminars"> <img src="img/ghost-red.png" alt="Red-ghost image in nav menu"> <br> Seminarier </a></li>
                 <li><a href="#signup"> Anmälan <img src="img/ghost-blue.png" alt="Blue-ghost image in nav menu"></a></li>
                 <li><a href="#price"> <img src="img/ghost-pink.png" alt="Pink-ghost image in nav menu"> Priser & biljetter </a></li>
-                <li><a href="#contact"> Kontakta oss <img src="img/ghost-yellow.png" alt="Yellow-ghost image in nav menu"></a></li>
+                <li><a href="#contact"> Kontakta oss <br><img src="img/ghost-yellow.png" alt="Yellow-ghost image in nav menu"></a></li>
             </ul>
-        </nav> 
-    </header>
-
-    <!-- Main -->
-    <main> 
+        </nav>
+        
         <div class="section-container"> <!-- To create "Section" for making dropdown list, the users can choose menus --> 
             <div class="title-menu">
                 <div class="title-name"><h2> Om Konferensen <img src="img/title-pacman.png" alt="Moving packman image in title"></h2></div>
             </div>
             <div class="about-web"> <!-- Konferensinformation -->
-                <p> Den årliga konferensen för frontendutvecklare, 18-20 oktober i Göteborg </p>
-                <p class="about-conference"> Välkommen till årets största konferens om frontendutveckling! <br> Under tre dagar kan du lära dig om de senaste trenderna inom webbutveckling, design och användarupplevelse (UX) genom över 10 seminarier med experter. 
+                <p><img src="img/october.png" alt="Image showing october month"> Datum: 18 - 20 oktober 2024 </p>
+                <p><img src="img/gps.png" alt="Image showing conference place"> Plats: Göteborgs Konferenscenter </p>
+                <p class="about-conference"> Välkommen till årets största konferens om frontendutveckling! Under tre dagar kan du lära dig om de senaste trenderna inom webbutveckling, design och användarupplevelse (UX) genom över 10 seminarier med experter. 
                     Frontendutvecklingskonferensen är ett årligt evenemang för utvecklare och designers som vill hålla sig uppdaterade med de nyaste verktygen och trenderna. 
                     Det erbjuds föreläsningar, workshops och nätverksmöjligheter, med fokus på ämnen som HTML, CSS, JavaScript, UX/UI och hur man gör webbsidor snabbare. </p>
             </div>
-
             <!-- Section: Seminarier -->
             <section id="seminars">
                 <div class="title-menu">
@@ -81,7 +82,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- Section: Anmälan -->
             <section id="signup">
                 <div class="title-menu">
@@ -147,8 +147,9 @@
                             <div class="allergies-text">
                                 <div class="allergies-text1"><img src="img/food-allergy.png" alt="Image showing food-allergy"></div>
                                 <div class="allergies-text1">
-                                    <h3> Medicinskt larm allergier! </h3>
-                                    <p> Vänligen skriv ner eventuella matallergier för att säkerställa en säker matupplevelse för alla. Tack för ert intresse! </p>
+                                    <h3>Medicinskt larm allergier!</h3>
+                                    <p> Vänligen skriv ner eventuella matallergier för att säkerställa en säker matupplevelse för alla. </p>
+                                    <p> Tack för ert intresse </p>
                                 </div>
                             </div>
                             <!-- Using "textarea" for the users can write down a multi-line text input field -->
@@ -157,7 +158,6 @@
                     </div> 
                 </div>      
             </section>
-
             <!-- Section: Priser för biljetter -->
             <section id="price">
                 <div class="title-menu">
@@ -216,13 +216,15 @@
                     </div>
                 </div>
             </section>
-
             <!-- Section: Kontakta oss -->
             <section id="contact">
                 <div class="title-menu">
                     <div class="title-name"><h2><img src="img/packman-menu.png" alt="Moving packman image in title"> Kontakta oss <img src="img/title-yellowghost.png" alt="Moving yellow-ghost image in title"></h2></div>
                 </div> 
                 <div class="contact-container">
+                    <div class="contact-betterweb">
+                        <p> Bättre Webb 2024 </p>
+                    </div>
                     <div class="organizer"> <!-- Organizer -->    
                         <div class="person">
                             <ul>
@@ -252,36 +254,23 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="contact-betterweb">
-                        <p> Bättre Webb 2024 </p>
-                        <div class="contact-info"> <!-- Contact informations -->
-                            <ul>
-                                <li><img src="img/www.png" alt="Image of website"> <a href="http://www.battrewebb2024.se"> www.battrewebb2024.se </a></li>
-                                <li><img src="img/email.png" alt="Image of email"> <a href="mailto:info@battrewebb2024.se"> info@battrewebb2024.se </a></li>
-                                <li><img src="img/address.png" alt="Image of address"> Svenska Mässan, 412 51 Göteborg, Sverige </li>
-                            </ul>
-                        </div>
-                    </div>   
+                    <div class="contact-info"> <!-- Contact informations -->
+                        <ul>
+                            <li><img src="img/www.png" alt="Image of website"> <a href="http://www.battrewebb2024.se"> www.battrewebb2024.se </a></li>
+                            <li><img src="img/email.png" alt="Image of email"> <a href="mailto:info@battrewebb2024.se"> info@battrewebb2024.se </a></li>
+                            <li><img src="img/address.png" alt="Image of address"> Svenska Mässan, 412 51 Göteborg, Sverige </li>
+                        </ul>
+                    </div>
+                    <div class="social-media"> <!-- Social media -->
+                        <ul>
+                            <li><img src="img/twitter.png" alt="Image of twitter"> <a href="https://twitter.com/BättreWebb2024"> @BättreWebb2024 </a></li>
+                            <li><img src="img/linkedin.png" alt="Image of linkedin"> <a href="https://linkedin.com/company/battrewebb2024"> linkedin.com/company/battrewebb2024 </a></li>
+                            <li><img src="img/instagram.png" alt="Image of instagram"> <a href="https://instagram.com/battrewebbconf"> @battrewebbconf </a></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </div>
     </main>
 </body>
-<footer>
-    <div class="social-media"> <!-- Social media -->
-        <a href="#home" class="home-button"> <img src="img/home.png" alt=""></a>
-        <fieldset>
-            <legend><img src="img/twitter.png" alt="Image of twitter"></legend>
-            <a href="https://twitter.com/BättreWebb2024"> @BättreWebb2024 </a>
-        </fieldset>
-        <fieldset>
-            <legend><img src="img/linkedin.png" alt="Image of linkedin"></legend>
-            <a href="https://linkedin.com/company/battrewebb2024"> linkedin.com/battrewebb2024 </a>
-        </fieldset>
-        <fieldset>
-            <legend><img src="img/instagram.png" alt="Image of instagram"></legend>
-            <a href="https://instagram.com/battrewebbconf"> @battrewebbconf </a>
-        </fieldset>
-    </div>
-</footer>
 </html>
