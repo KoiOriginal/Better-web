@@ -435,3 +435,11 @@ section li {
 }
 
 /* Responsiv design */
+@media (max-width: 870px) {
+    header {
+        flex-direction: row;
+    }
+    main {
+        padding: 0;
+    }
+}
