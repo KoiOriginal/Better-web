@@ -33,7 +33,7 @@ header h1:hover {
 main {
     padding: 20px;
     display: flex; /* Using flex to manage layout */
-    width: 1800px;
+    width: 100%;
     flex-wrap: wrap; /* Allow flex items to wrap */
     height: auto; /* Change height to auto for responsiveness */
 }
@@ -51,7 +51,6 @@ section {
     flex-direction: column;
     justify-content: space-between; 
     box-sizing: border-box; /* the size doesn't change when padding/border are added */  
-    margin-left: 18em;
 }
 /* Side navigation (Left menu) */
 .side-nav { 
