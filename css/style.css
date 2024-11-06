@@ -99,6 +99,7 @@ section {
 /* (>*) Select all direct child elements of the current parent element. */
     margin-top: 0%;
     width: 100%;
+    max-width: 340px;
     height: 6em;
     padding: 0.5em;
     margin: 1em;
@@ -122,7 +123,7 @@ section {
     cursor: pointer;
 }
 .title-name h2 {
-    padding: 1em;
+
 }
 .title-menu img {
     width: 60px;
