@@ -182,7 +182,8 @@ section p {
    border-radius: 1em;
    text-align: start;
    line-height: 2.5em;
-   width: 500px;
+   width: 100%;
+   max-width: 500px;
 }
 .section-container .seminarier-box2:hover {
     cursor: pointer;
