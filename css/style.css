@@ -9,24 +9,21 @@
 }
 /* Header */
 header {
+    display: flex;
     color: white;
     margin: 0%;
-    text-align: start; 
-    flex-grow: 1;  /* header covers all space */ 
+    text-align: start;
+    flex-grow: 1;
     width: 100%;
     height: 250px;
-    display: block;
-    background-image: url('../img/pacman-header.png');
-    background-size: cover; /* Adjust image size to cover the element */
-    background-position:left; /* Center the image */
-    background-repeat: no-repeat; /* Image is not repeating */
+    background-image: url(../img/pacman-header.png);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 header h1 {
-    margin-left: 8.6em;
-    margin-top: 1em;
-    padding: 0%;
-    font-size: xxx-large;
-    transition: transform 0.5s ease; /* Smooth transition for the image */
+    transition: transform 0.5s ease;
+    display: flex;
 }
 header h1:hover {
     transform: translateY(30px); /* Moves down the text 30px when hovered */
@@ -41,7 +38,12 @@ main {
     height: auto; /* Change height to auto for responsiveness */
 }
 section {
-    padding-top: 1em;
+    /* padding-top: 1em; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex: 1;
+    padding: 4rem;
 }
 .section-container {
     flex: 2; /* flex box 2 */
