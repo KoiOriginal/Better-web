@@ -38,12 +38,13 @@ main {
     height: auto; /* Change height to auto for responsiveness */
 }
 section {
+    flex-direction: column;
     /* padding-top: 1em; */
     display: flex;
     justify-content: start;
     align-items: center;
     flex: 1;
-    padding: 4rem;
+    padding: 1rem;
 }
 .section-container {
     flex: 2; /* flex box 2 */
