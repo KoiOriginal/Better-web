@@ -197,7 +197,7 @@ section p {
     margin-right: 5em;
 }
 .signup-form {
-    width: 300px;
+    width: 100%;
     padding: 2em;
 }
 .signup-form, .food-form { /* signup & food form */
