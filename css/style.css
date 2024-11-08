@@ -407,7 +407,7 @@ section .contact-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 2em;
+    line-height: 20px;
 }
 .contact-info img {
     width: 50px;
@@ -434,7 +434,7 @@ section li {
 .organize { /* Organizer container */
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 10px;
     width: 100%;
 }
 .person {
