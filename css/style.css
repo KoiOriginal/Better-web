@@ -307,6 +307,7 @@ section .price-form { /* Tickets price & details container */
 }
 .ticket-price { /* Tickets container */ 
     width: 60%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -383,33 +384,33 @@ input[type="submit"]:hover {
     transform: translateX(20px); /* Moves the image 20px to the right when hovered */
     cursor: pointer;
 } 
-/* Contact */
-section .contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    grid-template-rows: auto auto; /* Two rows */
-}
-.contact-betterweb {
-    font-size: x-large;
-    grid-column: 1 / 3;
-    justify-self: center;
-}
-.contact-info {
-    grid-column: 1;
-}
-.organizer {
-    grid-column: span 2; /* Spanning both columns */
-}
-.social-media {
-    grid-column: 2; 
-}
-.contact-betterweb, .contact-info, .organizer, .social-media {
+
+/* Contact menu */
+.contact-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    line-height: 20px;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
 }
-.contact-info img {
+.contact-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+}
+.contact-container h2 {
+    color: #fdbe11; 
+    font-size: xx-large;    
+}
+.contact-betterweb { /* text "Bättre Webb 2024" */
+    justify-self: center;
+    font-size: xx-large;
+}
+.contact-info img, .social-media img {
     width: 50px;
     height: 50px;
 } 
@@ -431,18 +432,30 @@ section li {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 50%;
 }
-.organize { /* Organizer container */
+.organizer { /* Organizer container */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 10px;
+    padding: 20px;
     width: 100%;
 }
+.organizer-title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fdbe11; 
+    font-size: xx-large;
+}
 .person {
-    padding: 1em;
-    margin: 1em;
+    padding: 10px;
+    margin: 10px;
     text-align: center;
     box-shadow: rgba(194, 149, 3, 0.35) 0px 5px 15px;
-    border-radius: 2em;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  
+    max-width: 400px;
 }
 .person:hover {
     background-color: rgba(128, 128, 128, 0.219);
@@ -451,15 +464,9 @@ section li {
     transform: translateY(20px); /* Moves the image 20px to go down when hovered */
     cursor: pointer;
 }
-.social-media { /* Social media container */
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    grid-template-rows: auto auto; /* Two rows */
-}
-.social-media img {
-    width: 40px;
-    height: 40px;
-}
+
+
+
 
 /* Responsiv design */
 @media (max-width: 870px) {
