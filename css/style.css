@@ -365,11 +365,14 @@ input[type="submit"]:hover {
     background-color: gray;
 }
 .ticket-included {
-    width: 450px;
-    margin: 2em;
-    padding: 1em;
-    line-height: 3em;
-    height: 100%;
+    width: 50%;
+    margin: 20px;
+    padding: 20px;
+    line-height: 30px;   
+}
+.ticket-included p {
+    font-size: x-large;
+    color: #653d6d;
 }
 .ticket-included img {
     width: 50px;
