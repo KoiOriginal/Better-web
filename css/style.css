@@ -200,7 +200,6 @@ section p {
     align-items: center;
     flex-direction: column;
 }
-
 .food-form {
     width: 100%;
     padding: 20px;
@@ -230,7 +229,7 @@ input, textarea, select {
     border: 1px solid #918c8c;
     border-radius: 4px;
 }
-input, textarea {
+.signup-container input, textarea {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .allergies-text {
@@ -239,9 +238,9 @@ input, textarea {
     justify-content: space-between;   
 }
 .allergies-text1 {
-    margin: 1em;
-    padding: 0.5em;
-    line-height: 1.5em;
+    margin-top: 20px;
+    padding: 20px;
+    line-height: 15px;
 }
 .allergies-text1 img {
     width: 150px;
@@ -253,9 +252,9 @@ input, textarea {
     cursor: pointer;
 }
 textarea { /* Allergies text-box */
-    width: 25em;
-    height: 10em;
-    border-radius: 0.5em;
+    width: 50%;
+    height: 200px;
+    border-radius: 5px;
     background-color: #76d3f731;
 }
 button {/* food allergies button */
