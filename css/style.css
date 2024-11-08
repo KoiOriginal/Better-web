@@ -123,9 +123,6 @@ section {
 .title-name:hover {
     cursor: pointer;
 }
-.title-name h2 {
-
-}
 .title-menu img {
     width: 60px;
     height: 60px;
@@ -194,19 +191,16 @@ section p {
 .signup-container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
-.signup-form { /* Signup-form */
+.signup-form, .food-form { /* Signup-form */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.signup-form, .food-form { /* signup & food form */
-    margin: 5px;
-    flex-grow: 1; 
-    line-height: 5px; 
-}
+
 .food-form {
     width: 100%;
     padding: 20px;
@@ -235,6 +229,8 @@ input, textarea, select {
     margin-bottom: 10px;
     border: 1px solid #918c8c;
     border-radius: 4px;
+}
+input, textarea {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .allergies-text {
