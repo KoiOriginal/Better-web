@@ -7,6 +7,7 @@
     font-weight: 500;
     font-style: normal; 
 }
+
 /* Header */
 header {
     display: flex;
@@ -29,6 +30,7 @@ header h1:hover {
     transform: translateY(30px); /* Moves down the text 30px when hovered */
     cursor: pointer;
 } 
+
 /* Main */
 main {
     padding: 20px;
@@ -53,6 +55,7 @@ section {
     justify-content: space-between; 
     box-sizing: border-box; /* the size doesn't change when padding/border are added */  
 }
+
 /* Side navigation (Left menu) */
 .side-nav { 
     width: 220px;  
@@ -95,6 +98,7 @@ section {
     padding: 0;
     margin: 0%;
 }
+
 /* Name of menu list */
 .section-container .title-menu > * { /* title menu container*/
 /* (>*) Select all direct child elements of the current parent element. */
@@ -137,6 +141,7 @@ section {
     transform: scale(1.2); /* Making the element grow in size */
     transition: all 0.3s ease; /* Smooth transition for the change */
 }
+
 /* Om Konferensen menu */
 .about-web img {
     width: 50px;
@@ -156,6 +161,7 @@ section {
     background-color: rgba(128, 128, 128, 0.164);
     transform: translateY(15px); /* Moves the image 15px to go down when hovered */
 }
+
 /* Seminarier menu */
 section p {
     padding-top: 1em;
@@ -187,6 +193,7 @@ section p {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.171);
 }
+
 /* Anmälan menu */
 .signup-container {
     display: flex;
@@ -212,7 +219,7 @@ section p {
     flex-direction: column;
 }
 .food-form form {
-    width: 100%;
+    width: 80%;
     padding-top: 20px;
 }
 .food-form .submit {
