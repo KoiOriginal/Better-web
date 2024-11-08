@@ -233,14 +233,12 @@ input, textarea, select {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .allergies-text {
-    margin: 0;
     display: flex;
-    justify-content: space-between;   
-}
-.allergies-text1 {
-    margin-top: 20px;
+    justify-content: space-between; 
+    width: 80%;
+    margin: 20px;
     padding: 20px;
-    line-height: 15px;
+    line-height: 25px;
 }
 .allergies-text1 img {
     width: 150px;
@@ -303,55 +301,68 @@ textarea:invalid + .error-message {
 /* Priser för biljetter */
 section .price-form { /* Tickets price & details container */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .ticket-price { /* Tickets container */ 
-    width: 20em;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 .ticket {
+    border: 2px rgba(211, 149, 206, 0.932) solid;
     border-radius: 5px;
-    line-height: 1.8em;
-    padding: 1em;
-    margin: 1em;
-    margin-bottom: 10px;
-    box-shadow: rgba(217, 171, 221, 0.35) 0px -50px 36px -28px inset;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: rgba(160, 105, 165, 0.719) 0px -50px 36px -28px inset;
 }
 .price-ticket, .ticket-included h3 {
     font-weight: bold;
-    color: #f6a4a2;
+    color: #db87d0;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     text-align: center;
+    border: 2px solid rgb(187, 118, 175);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
 }
 .ticket:hover {
     cursor: pointer;
     background-color: #4b464a18;
 }
 .ticket-buying-container {
-    width: 500px;
-    margin: auto;
+    width: 50%;
+    margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 5px; 
 }
+
 .checkbox-label { /* checkbox */
     margin-bottom: 10px; /* Add spacing between each checkbox */
 }
-input[type="text"], input[type="email"], select {
+input[type="text"], input[type="email"] {
     width: 100%;
     padding: 10px;
     margin: 5px 0 20px;
     border-radius: 4px;
 }
 input[type="submit"] {
-    color: black;
+    color: white;
+    background-color: #653d6d;
     padding: 10px;
-    border: none;
+    border: 1px solid gray;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 1em;
+    margin-top: 20px;
+    width: 100%;
+    box-shadow: rgba(18, 18, 19, 0.2) 0px 7px 29px 0px;
 }
 input[type="submit"]:hover {
-    background-color: #858080;
+    background-color: gray;
 }
 .ticket-included {
     width: 450px;
