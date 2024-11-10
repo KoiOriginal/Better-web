@@ -113,7 +113,7 @@ section {
 }
 .home-button:hover {
     background-color: red; 
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1); /* Slightly */
 }
 
 /* Name of menu list */
@@ -169,7 +169,6 @@ section {
     justify-content: center; 
     flex-direction: column; 
 }
-
 .about-web img { 
     width: 50px;
     height: 50px;
@@ -332,6 +331,7 @@ textarea:invalid + .error-message {
     margin: 1em;
     padding: 1em;
 }
+
 /* Priser för biljetter */
 section .price-form { /* Tickets price & details container */
     display: flex;
@@ -378,7 +378,6 @@ section .price-form { /* Tickets price & details container */
     border: 1px solid #ccc;
     border-radius: 5px; 
 }
-
 .checkbox-label { /* checkbox */
     margin-bottom: 10px; /* Add spacing between each checkbox */
 }
@@ -545,6 +544,25 @@ section li {
     /* signup-container */
     .signup-container {
         flex-direction: column; 
+    }
+    .allergies-text {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+    }
+    .allergies-text1 {
+        margin-bottom: 20px;
+        width: 100%; 
+    }
+    .allergies-text1 img {
+        max-width: 60%; 
+        margin-bottom: 20px; 
+    }
+    h3 {
+        font-size: 1.5rem; 
+    }
+    p {
+        font-size: 1rem; 
     }
     /* price-form */
     .price-form {
