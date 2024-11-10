@@ -475,10 +475,7 @@ section li {
     cursor: pointer;
 }
 
-
-
-
-/* Responsiv design */
+/* Responsiv design (870px) */
 @media (max-width: 870px) {
     /* header */
     header {
@@ -542,5 +539,48 @@ section li {
     .person {
         width: 90%;
         max-width: 100%; 
+    }
+}
+
+/* Responsiv design (1200px) */
+@media (min-width: 1200px) {
+    /* side-nav */
+    .side-nav {
+        width: 250px; 
+        font-size: larger;
+    }
+    /* main */
+    main {
+        padding: 40px;
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around; 
+    }
+    /* section */
+    section {
+        flex: 3; /* add more space */
+        padding: 2rem;
+        max-width: 70%; 
+    }
+    /* title menu */
+    .section-container .title-menu > * {
+        max-width: 400px;
+        padding: 1em;
+    }
+    /* ticket price */
+    .ticket-price {
+        width: 70%; 
+    }
+    /* signup form */
+    .signup-container form {
+        width: 70%;
+        padding: 20px;
+    }
+    .signup-form, .food-form {
+        max-width: 600px; 
+    }
+    /* contact */
+    .contact-container > div {
+        max-width: 600px;
     }
 }
