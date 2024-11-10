@@ -571,9 +571,16 @@ section li {
     }
      /* ticket */
      .ticket {
-        width: 90%;
-        margin: 5px 0;
+        width: 100%;
+        margin-bottom: 15px;
         padding: 15px;
+        text-align: center;
+    }
+    .ticket-price {
+        justify-content: center; 
+    }
+    .price-ticket {
+        font-size: 1.2rem; 
     }
      /* organizer */
      .organizer {
