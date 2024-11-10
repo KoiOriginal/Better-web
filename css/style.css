@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 /* import google font */
 * { /* "*" for all */
@@ -481,10 +480,67 @@ section li {
 
 /* Responsiv design */
 @media (max-width: 870px) {
+    /* header */
     header {
-        flex-direction: row;
+        font-size: large;
+        padding: 10px
     }
+    /* main */
     main {
-        padding: 0;
+        flex-direction: column;
+        padding: 10px;
+    }
+    /* side-nav */
+    .side-nav {
+        position: relative;
+        width: 100%; 
+        margin: 0;
+        padding: 10px;
+        font-size: medium;
+    }
+    /* section */
+    section {
+        flex: 1 1 100%; /* flex-grow, flex-shrink, flex-basis */
+        padding: 0.5rem;
+    }
+    .section-container {
+        flex: 1 1 100%; /* flex-grow, flex-shrink, flex-basis */
+        padding: 0.5rem;
+    }
+    /* title-menu */
+    .title-menu > * {
+        max-width: 100%; 
+        height: auto; 
+        margin: 0.5em 0;
+    }
+    /* about-conference */
+    .about-conference {
+        width: 90%; 
+        font-size: medium;
+    }
+    /* signup-container */
+    .signup-container {
+        flex-direction: column; 
+    }
+    /* price-form */
+    .price-form {
+        width: 100%;
+        padding: 10px;
+    }
+     /* ticket */
+     .ticket {
+        width: 90%;
+        margin: 5px 0;
+        padding: 15px;
+    }
+     /* organizer */
+     .organizer {
+        flex-direction: column;
+        gap: 5px;
+    }
+    /* person */
+    .person {
+        width: 90%;
+        max-width: 100%; 
     }
 }
