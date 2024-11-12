@@ -502,7 +502,7 @@ section li {
 }
 
 /* Responsiv design (870px) */
-@media (max-width: 870px) {
+@media (max-width: 950px) {
     /* header */
     header {
         font-size: large;
