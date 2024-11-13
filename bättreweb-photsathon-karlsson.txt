@@ -20,3 +20,6 @@ Sätt menyerna tillsammans
 •	Lärare code review: Jag borde använda en falsk länk.
 Anmälningssidan 
 •	Lärare code review: Telefonnummer-boxen bör använda <input type="text" …> istället för <input type="number" …> eftersom det behövs för att kunna skriva in fler än 2 siffror.
+
+Feedback
+Webbsidan fungerar inte på skärmar smalare än 1800 pixlar. 
