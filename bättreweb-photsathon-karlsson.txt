@@ -23,3 +23,6 @@ Anmälningssidan
 
 Feedback
 Webbsidan fungerar inte på skärmar smalare än 1800 pixlar. 
+
+Feedback
+Webbsidan fungerar inte på skärmar smalare än 320 pixlar.
