@@ -46,7 +46,6 @@ section {
 .section-container {
     flex: 2; /* flex box 2 */
     display: flex;
-    padding-left: 20%;
     flex-direction: column;
     justify-content: space-between; 
     box-sizing: border-box; /* the size doesn't change when padding/border are added */  
@@ -55,22 +54,21 @@ section {
 /* Side navigation (Left menu) */
 .side-nav { 
     width: auto; 
-    font-size: large;
-    position: fixed; 
-    left: 0%;
-    top: 0%;  
+    font-size: large;  
     margin: 20px;
     padding: 20px;
 }
 .side-nav ul {
     list-style: none; /* no dot before text */
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
 }
 .side-nav ul li {
     border-radius: 15px;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     background-color: black;  
 }
 .side-nav ul a {
@@ -94,26 +92,6 @@ section {
 .side-nav a {
     padding: 0;
     margin: 0%;
-}
-
-/* Home button */
-.home-button-container {
-    margin: 30px;
-}
-.home-button {
-    background-color: black; 
-    color: white; 
-    padding: 10px; 
-    font-size: 16px; 
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
-}
-.home-button:hover {
-    background-color: red; 
-    transform: scale(1.1); /* Slightly */
 }
 
 /* Name of menu list */
@@ -201,9 +179,8 @@ section p {
     display: grid;
     grid-gap: 20px;
 }
-.seminarier-box .seminarier-box1 {
+.seminarier-box1 li, .seminarier-box1 h3 {
     text-align: center;
-    flex-grow: 1; /* making box as the same size */
 } 
 .section-container .seminarier-box2 { 
    padding: 1em;
@@ -221,10 +198,11 @@ section p {
 }
 
 /* Anmälan menu */
-.signup-container {
+.signup-container, #registration-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
 }
 .signup-form, .food-form { /* Signup-form */
     width: 100%;
@@ -237,6 +215,7 @@ section p {
     width: 100%;
     padding: 20px;
     margin: 20px;
+    text-align: center;
 }
 .food-form fieldset {
     display: flex;
@@ -250,6 +229,9 @@ section p {
 }
 .food-form .submit {
     width: 50%;
+}
+#allergies {
+    text-align: center
 }
 section .img-food {
     width: 50px; 
@@ -345,6 +327,7 @@ section .price-form { /* Tickets price & details container */
     justify-content: center;
     align-items: center;
     padding: 10px;
+    width: 80%;
 }
 .ticket {
     border: 2px rgba(211, 149, 206, 0.932) solid;
@@ -355,6 +338,12 @@ section .price-form { /* Tickets price & details container */
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+}
+.ticket-choices .checkbox-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .price-ticket, .ticket-included h3 {
@@ -377,6 +366,9 @@ section .price-form { /* Tickets price & details container */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px; 
+}
+.ticket-buying-container h1, .ticket-included {
+    text-align: center;
 }
 .checkbox-label { /* checkbox */
     margin-bottom: 10px; /* Add spacing between each checkbox */
@@ -501,324 +493,145 @@ section li {
     cursor: pointer;
 }
 
+/* Footer */
+/* Home button */
+.home-button-container {
+    margin: 10px;
+    display: flex;
+    justify-content: start;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+.home-button {
+    padding: 10px; 
+    margin: 20px;
+    font-size: 16px; 
+    text-align: center; 
+    text-decoration: none;    
+}
+.home-button:hover {
+    cursor: pointer;
+}
+.home-button img {
+    width: 50px;
+    height: 50px;
+}
 
-/* ********** Start Responsiv design ********** */
-
-/* For small devices (360px - 390px wide) */
-/* Base Styles */
-
-/* ... All your existing styles ... */
-
-/* Responsive design for screen width 360px to 390px */
-@media (max-width: 390px) and (min-width: 360px) {
+/******************** Responsive design ********************/
+@media (min-width: 320px) and (max-width: 800px) {
+    * {
+        font-size: 14px; 
+    }
     /* Header */
     header {
-        font-size: xx-large;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: large; 
     }
-    #about-conference h1 {
-        text-align: center;
-        padding: 10px;
+    header h1 {
+        font-size: 1.5em; 
     }
-    /* Main */
+    /* Main Section */
     main {
         padding: 10px;
         flex-direction: column;
-        align-items: flex-start; 
     }
     section {
-        flex: 1 1 100%; 
+        padding: 10px;
+        width: 100%;
+    }
+    /* Side Navigation */
+    .side-nav {
+        width: 100%;
+        font-size: small;
+        margin: 10px;
         padding: 10px;
     }
-    /* Side navigation (Left menu) */
-    .side-nav {
-        width: 80%; 
-        padding: 10px;
-        margin: 10px;
-        display: flex;
-        justify-content: center;
+    .side-nav ul {
+        flex-direction: column; /* Stack the list vertically */
     }
     .side-nav ul li {
-        font-size: medium;
-        margin-bottom: 8px;
-    }
-    .side-nav img {
-        width: 40px; 
-        height: 40px;
-    }
-    /* Home button */
-    .home-button-container {
-        margin: 20px;
-    }
-    .home-button {
-        font-size: 14px;
+        margin: 5px;
         padding: 8px;
     }
-
-    /* Title Menu */
-    .title-menu {
-        width: 80%; 
-        font-size: small;
-        padding: 0.5em;
+    .side-nav ul li a {
+        font-size: 14px; 
     }
-
+    /* Section Containers */
+    .section-container {
+        flex: 1;
+        width: 100%;
+        padding: 10px;
+    }  
+    .title-menu {
+        width: 90%; 
+        max-width: 300px;
+    }
     .title-menu img {
         width: 40px;
         height: 40px;
     }
-    /* About Web */
-    .about-web {
+    /* About Web Section */
+    .about-web, .about-conference {
+        padding: 10px;
+        width: 100%;
+    }
+    .about-web p {
         text-align: center;
     }
-    .about-web img {
-        width: 40px;
-        height: 40px;
-    }
     .about-conference {
-        font-size: medium;
-        padding: 15px;
-        width: 80%;
+        padding: 10px;
     }
-    /* Seminarier */
+    /* Seminar Box */
     .seminarier-box {
-        grid-template-columns: 1fr; 
-        margin: 30px;
+        display: flex;
+        flex-direction: column; 
     }
     .seminarier-box2 {
+        width: 100%;
+        max-width: 100%;
         padding: 10px;
-        font-size: small;
     }
-    .seminarier-box2 li {
-        text-align: center;
-    }
-    /* Anmälan (Signup form) */
+    /* Signup and Registration Forms */
     .signup-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .signup-form, .food-form {
-        width: 100%;
         padding: 10px;
     }
-    .food-form fieldset, .ticket-buying-container {
-        width: 100%;
-    }
-
-    input, textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 8px;
-    }
-
-    .allergies-text1 img {
-        width: 100px;
-        height: 100px;
-    }
-
-    textarea {
-        width: 90%;
-        height: 150px;
-    }
-
-    /* Tickets Price */
-    .ticket-price {
-        flex-direction: column;
-    }
-
-    .ticket {
-        padding: 15px;
-        width: 90%;
+    .food-form {
+        padding: 10px;
         margin: 10px;
-    }
-
-    .price-ticket {
-        font-size: small;
-    }
-
-    .ticket-included {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .ticket-included img {
-        width: 40px;
-        height: 30px;
-    }
-
-    /* Contact */
-    .contact-container {
         width: 100%;
-        padding: 10px;
     }
-
-    .contact-container > div {
-        width: 90%;
-    }
-
-    .contact-betterweb {
-        font-size: large;
-    }
-
-    .person {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .person img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .organizer-title {
-        font-size: large;
-    }
-}
-
-/* Responsiv design (870px) */
-@media (max-width: 950px) {
-    /* header */
-    header {
-        font-size: large;
-        padding: 10px
-    }
-    /* main */
-    main {
-        flex-direction: column;
-        padding: 10px;
-    }
-    /* side-nav */
-    .side-nav {
-        position: relative;
+    input, textarea, select {
         width: 100%; 
-        margin: 0;
+    }
+    .signup-container form {
         padding: 10px;
-        font-size: medium;
-    }
-    /* section */
-    section {
-        flex: 1 1 100%; /* flex-grow, flex-shrink, flex-basis */
-        padding: 0.5rem;
-    }
-    .section-container {
-        flex: 1 1 100%; 
-        padding: 0.5rem;
-    }
-    /* title-menu */
-    .title-menu > * {
-        max-width: 100%; 
-        height: auto; 
-        margin: 0.5em 0;
-    }
-    /* about-conference */
-    .about-conference {
-        width: 90%; 
-        font-size: medium;
-    }
-    /* signup-container */
-    .signup-container {
-        flex-direction: column; 
     }
     .allergies-text {
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
+        display: flex;
+        flex-direction: column;
     }
-    .allergies-text1 {
-        margin-bottom: 20px;
-        width: 100%; 
-    }
-    .allergies-text1 img {
-        max-width: 60%; 
-        margin-bottom: 20px; 
-    }
-    h3 {
-        font-size: 1.5rem; 
-    }
-    p {
-        font-size: 1rem; 
-    }
-    /* price-form */
-    .price-form {
+    /* Ticket Price Section */
+    .ticket-price {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .ticket, .ticket-buying-container, .ticket-included {
+        width: 100%;
+    }
+    .ticket-choices {
+        margin-top: 10px;
+    }
+    /* Contact Section */
+    .contact-container {
         padding: 10px;
     }
-     /* ticket */
-     .ticket {
-        width: 100%;
-        margin-bottom: 15px;
-        padding: 15px;
-        text-align: center;
+    .contact-container img {
+        width: 30px;
+        height: 30px;
     }
-    .ticket-price {
-        justify-content: center; 
-    }
-    .price-ticket {
-        font-size: 1.2rem; 
-    }
-     /* organizer */
-     .organizer {
-        flex-direction: column;
-        gap: 5px;
-    }
-    /* person */
-    .person {
-        width: 90%;
-        max-width: 100%; 
-    }
-    .ticket-included, .ticket-buying-container h1, .ticket-choices, #allergies, .side-nav {
-        text-align: center;
-    }
-}
-
-/* Responsiv design (1200px) */
-@media (min-width: 1200px) {
-    /* side-nav */
-    .side-nav {
-        width: 250px; 
-        font-size: larger;
-    }
-    /* main */
-    main {
-        padding: 40px;
-        display: flex;
-        flex-direction: row; 
-        justify-content: space-around; 
-    }
-    /* section */
-    section {
-        flex: 3; /* add more space */
-        padding: 2rem;
-        max-width: 70%; 
-    }
-    /* title menu */
-    .section-container .title-menu > * {
-        max-width: 400px;
-        padding: 1em;
-    }
-    /* ticket price */
-    .ticket-price {
-        width: 70%; 
-    }
-    /* signup form */
-    .signup-container form {
-        width: 70%;
-        padding: 20px;
-    }
-    .signup-form, .food-form {
-        max-width: 600px; 
-    }
-    /* contact */
-    .contact-container > div {
-        max-width: 600px;
-    }
-    .about-conference {
-        width: auto;
-        margin: 20px;
+    .contact-container h2 {
         text-align: center;
     }
     .organizer {
@@ -827,359 +640,26 @@ section li {
         justify-content: center;
         align-items: center;
     }
-    #allergies, .ticket-buying-container, .ticket-included {
-        text-align: center;
-    }
-}
-
-/* Responsive Design for 320px viewport */
-@media (max-width: 320px) {
-    * {
-        font-size: small; 
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        margin: 0;
-
-        justify-content: center; 
-        align-items: center; 
-    }
-    header {
-        display: flex;
-        flex-direction: column;
-        font-size: large;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    header h1 {
-        font-size: 1.5em;
-    }
-    .side-nav {
-        width: 100%; 
-        position: static; 
-        margin: 10px;
-        padding: 10px;
-        font-size: small;
-        text-align: center; 
-        display: flex;
-        justify-content: center; 
-        align-items: center;     
-    }
-    .side-nav ul {
-        list-style: none;
-        padding: 0;
-    }
-    .side-nav ul li {
-        padding: 20px;
-    }
-    .side-nav img {
-        width: 30px;
-        height: 30px;
-    }
-    main {
-        display: flex;
-        flex-direction: column; 
-        padding: 10px;
-        align-items: center;
-        gap: 15px;
-    }
-    .section-container {
-        padding: 10px;
-        text-align: center;
-    }
-    .title-menu > * {
-        max-width: 280px; 
-        height: auto;        
-        padding: 0.5em;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }  
-    .title-name img {
-        width: 30px;
-        height: 30px;
-    }
-    .home-button-container {
-        text-align: center;
-        margin: 10px 0;
-    }
-    .home-button {
-        font-size: small;
-        padding: 10px;
-    }
-    .about-conference {
-        width: 90%; 
-        padding: 15px;
-        margin: 10px 0;
-        font-size: medium;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-    .seminarier-box {
-        margin: 0 20px 0 0; /* top, right, bottom, left */
-    }
-    .seminarier-box2 {
-        max-width: 100%;
-        padding: 15px;
-        font-size: small;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-    .seminarier-box1 h3 {
-        margin: 10px;
-    }
-    .signup-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        gap: 15px;
-    }
-    .signup-form, .food-form {
-        width: 90%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-    input, textarea, select {
-        font-size: small;
-        width: 100%;
-        margin: 5px 0;
-        padding: 5px;
-    }
-    .allergies-text {
-        display: flex;
-        flex-direction: column; 
-        width: 100%;
-        align-items: center;
-    }
-    textarea {
-        width: 90%; 
-    }
-    .ticket {
-        width: 90%;
-        padding: 15px;
-        margin: 10px auto;
-        font-size: small;
-        text-align: center;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-    .ticket-included {
-        width: 90%;
-        padding: 10px;
-        font-size: medium;
-        text-align: center;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-    }
-    .contact-container {
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        gap: 15px;
-    }
-    .contact-container > div {
-        width: 100%;
-        max-width: 100%; 
-        text-align: center;
-        margin-bottom: 10px;
-    }
     .person {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        width: 90%;
-        padding: 15px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 10px;
+        width: 100%;
+        margin-bottom: 20px;
     }
     .person img {
-        width: 100px;
-        height: 100px;
+        width: 70%;
+        height: auto;
     }
-    .ticket-buying-container, .ticket-included {
-        padding: 15px;
-        text-align: center;
-    }
-    .ticket-price {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    #allergies {
-        text-align: center;
-    }
-    .food-form {
+    /* Footer */
+    .home-button-container {
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin: 10px;
+        position: fixed;
+        width: 100%;
     }
-    .seminarier-box2 li {
-        text-align: center;
+    .home-button:hover {
+        cursor: pointer;
     }
-    .about-web {
-        text-align: center;
-        padding: 20px;
-        margin: 10px 0;
-    }
-}
-
-/* For medium devices (412-428px wide) */
-@media (max-width: 428px) and (min-width: 412px) {
-    * {
-        font-size: 14px; /
-    }
-    header {
-        font-size: large; 
-    }
-    header h1:hover {
-        transform: translateY(20px); 
-    }
-    main {
-        padding: 10px;
-        flex-direction: column; 
-    }
-    .side-nav {
-        width: 100%; 
-        position: relative;
-        margin: 0;
-        padding: 10px;
-        text-align: center; 
-    }
-    .side-nav ul li {
-        padding: 8px;
-        margin-bottom: 5px;
-        font-size: medium; 
-    }
-    .side-nav img {
-        width: 40px; 
+    .home-button img {
+        width: 40px;
         height: 40px;
-    }
-    /* Section */
-    section {
-        padding: 10px;
-        flex: 1;
-        width: 100%; 
-    }
-    .section-container {
-        padding-left: 0;
-        flex: 1; 
-    }
-    /* Buttons and menu titles */
-    .home-button-container {
-        margin: 15px;
-    }
-    .home-button {
-        padding: 8px;
-        font-size: 14px;
-        border-radius: 8px; 
-    }
-    .title-menu > * {
-        width: 90%; 
-        max-width: 300px;
-        margin: 0.5em;
-    }
-    /* Conference description */
-    .about-conference {
-        font-size: medium;
-        line-height: 30px; 
-        width: 90%;
-    }
-    .seminarier-box {
-        margin: 10px;
-    }
-    /* Signup form */
-    .signup-form, .food-form {
-        width: 100%; 
-        padding: 10px;
-    }
-    input, textarea, select {
-        width: 100%; 
-        font-size: 14px; 
-    }
-    .food-form button, .ticket-include, input[type="submit"] {
-        width: 100%; 
-    }
-    #allergies, .ticket-buying-container, .ticket-included, .about-web p, .seminarier-box2 li {
-        text-align: center;
-    }
-    .food-form {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px 20px 10px 0; /* top, right, bottom, left */
-    }
-    /* Tickets */
-    .ticket-price {
-        flex-direction: column; 
-    }
-    .ticket, .ticket-buying-container {
-        padding: 15px;
-        width: 100%; 
-    }
-    .price-ticket, .ticket-included h3 {
-        font-size: medium; 
-    }
-    /* Contact */
-    .contact-container {
-        padding: 10px;
-    }
-    .contact-container > div {
-        max-width: 90%; 
-    }
-    .social-media img, .contact-info img {
-        width: 50px;
-        height: 50px;
-    }
-    .person img {
-        width: 100px;
-        height: 100px; 
-    }
-    .person {
-        flex-direction: column; 
-        padding: 10px;
-        margin: 5px;
-    }
-}
-
-/* For ultra-wide screens (above 1800px wide) */
-@media (min-width: 1801px) {
-    .side-nav {
-        width: 20%;
-    }
-    .section-container {
-        padding-left: 20%;
-    }
-    .about-conference {
-        width: 50%;
-    }
-    .seminarier-box2 {
-        width: 50%;
-    }
-    .ticket-included {
-        width: 50%;
-    }
-}
-
-/* Remove animation on mobile devices */
-@media (max-width: 768px) {
-    /* Remove animation on mobile size */
-    .title-name img {
-      animation: none; /* Disable animation */
     }
 }
